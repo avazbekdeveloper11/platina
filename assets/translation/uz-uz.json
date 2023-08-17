@@ -1,0 +1,13 @@
+{
+  "connection_is_afk": "Ulanish AFK",
+  "no_connection_body": "Internetga ulanish yo'q. Internet aloqangizni tekshiring va qaytadan urining.",
+  "retry": "Qayta urinish",
+  "cancel": "Bekor qilish",
+  "submit": "yuborish",
+  "network_error": "Internet yo'q",
+  "unknown_error": "Nimadir noto'g'ri ketdi",
+  "add": "Qo'shish",
+  "another_fact": "Boshqa fakt!",
+  "fact_history": "Faktlar tarixi",
+  "no_data": "Ma'lumotlar yo'q"
+}
