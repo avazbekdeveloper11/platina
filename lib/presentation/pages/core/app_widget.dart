@@ -1,7 +1,9 @@
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:platina/application/bottom_nav_bar_cubit/bottomnavbar_cubit.dart';
 import 'package:platina/infrastructure/services/connectivity.dart';
 import 'package:platina/infrastructure/services/shared_pref_service.dart';
 import 'package:platina/presentation/pages/core/splash_screen.dart';
-import 'package:platina/presentation/pages/home/home_page.dart';
+import 'package:platina/presentation/pages/nav_bar/nav_bar.dart';
 import 'package:platina/presentation/styles/theme.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -33,7 +35,10 @@ class AppWidget extends StatelessWidget {
                 debugShowCheckedModeBanner: false,
                 supportedLocales: context.supportedLocales,
                 localizationsDelegates: context.localizationDelegates,
-                home: const HomePage(),
+                home: BlocProvider(
+                  create: (context) => BottomNavbarCubit(),
+                  child: const BottomNavBar(token: ''),
+                ),
               );
             },
           );

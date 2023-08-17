@@ -40,7 +40,6 @@ class NoInernetComponent extends StatelessWidget {
                   ),
                   onPressed: () async {
                     bool result = await ConnectivityX.create;
-                    print(result.toString());
                     if (result) {
                       // ignore: use_build_context_synchronously
                       // Navigator.pushAndRemoveUntil(context,

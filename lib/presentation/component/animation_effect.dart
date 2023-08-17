@@ -10,16 +10,17 @@ class AnimationButtonEffect extends StatefulWidget {
   final bool isPositioned;
   Widget child;
   AnimationButtonEffect(
-      {Key? key, this.disabled = false,
+      {Key? key,
+      this.disabled = false,
       required this.onTap,
       this.isGrey = false,
       this.isLoading = false,
       required this.child,
-        this.isPositioned = false
-      }) : super(key: key);
+      this.isPositioned = false})
+      : super(key: key);
 
   @override
-  _AnimationButtonEffectState createState() => _AnimationButtonEffectState();
+  State<AnimationButtonEffect> createState() => _AnimationButtonEffectState();
 }
 
 class _AnimationButtonEffectState extends State<AnimationButtonEffect>
@@ -55,8 +56,10 @@ class _AnimationButtonEffectState extends State<AnimationButtonEffect>
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      behavior: widget.isPositioned ? HitTestBehavior.translucent : HitTestBehavior.deferToChild,
-      onTap: (){
+      behavior: widget.isPositioned
+          ? HitTestBehavior.translucent
+          : HitTestBehavior.deferToChild,
+      onTap: () {
         if (!widget.disabled) {
           FocusScopeNode currentFocus = FocusScope.of(context);
           if (!currentFocus.hasPrimaryFocus) {
