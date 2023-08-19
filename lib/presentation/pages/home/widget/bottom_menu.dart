@@ -32,7 +32,7 @@ class BottomMenu extends StatelessWidget {
                   child: SvgPicture.asset(icons.appLogo),
                 ),
                 Wrap(
-                  spacing: 32.w,
+                  spacing: 20.w,
                   children: [
                     Text(
                       'Сайт ҳақида',

@@ -1,6 +1,9 @@
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:platina/application/bottom_nav_bar_cubit/bottomnavbar_cubit.dart';
+import 'package:platina/application/home_bloc/home_bloc.dart';
+import 'package:platina/infrastructure/apis/home_apis.dart';
+import 'package:platina/infrastructure/repositories/home_repo.dart';
 import 'package:platina/presentation/pages/home/home_page.dart';
 import 'package:platina/presentation/pages/page_not_found/page_not_found.dart';
 import 'package:platina/presentation/styles/theme_warpper.dart';
@@ -30,12 +33,20 @@ class _BottomNavBarState extends State<BottomNavBar> {
               // ? Body
               body: IndexedStack(
                 index: context.watch<BottomNavbarCubit>().currentIndex,
-                children: const [
-                  HomePage(),
-                  PageNotFound(),
-                  PageNotFound(),
-                  PageNotFound(),
-                  PageNotFound(),
+                children: [
+                  BlocProvider(
+                    create: (context) => HomeBloc(HomeRepo(
+                      HomeService.create(),
+                      WeatherService.create(),
+                    ))
+                      ..add(HomeEvent.getPopularPosts())
+                      ..add(HomeEvent.getWather()),
+                    child: const HomePage(),
+                  ),
+                  const PageNotFound(),
+                  const PageNotFound(),
+                  const PageNotFound(),
+                  const PageNotFound(),
                 ],
               ),
               // ? Bottomnavigationbar

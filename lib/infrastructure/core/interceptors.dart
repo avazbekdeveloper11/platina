@@ -30,7 +30,7 @@ class CoreInterceptor implements RequestInterceptor {
   @override
   FutureOr<Request> onRequest(Request request) async {
     final headers = Map<String, String>.from(request.headers);
-    headers['Accept-Language'] = 'app_lang'.tr();
+    headers['Accept-Language'] = 'uz'.tr();
     Request newRequest = request.copyWith(headers: headers);
     return newRequest;
   }

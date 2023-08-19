@@ -1,12 +1,16 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:platina/infrastructure/models/popular_model/popular_model.dart';
 import 'package:platina/presentation/pages/home/widget/old_time.dart';
 import 'package:platina/presentation/pages/home/widget/tile_builder.dart';
 import 'package:platina/presentation/styles/theme_warpper.dart';
+import 'package:simple_html_css/simple_html_css.dart';
 
 class BigCart extends StatelessWidget {
-  const BigCart({super.key});
+  final PopularModel popularModel;
+  const BigCart({super.key, required this.popularModel});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +26,11 @@ class BigCart extends StatelessWidget {
                 width: 1.sw,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage(icons.defaultImg),
+                    image: CachedNetworkImageProvider(
+                      popularModel.results!.isNotEmpty
+                          ? "https://platina.uz/_ipx/w_620/https://cp.platina.uz/${popularModel.results?.first.image}"
+                          : '',
+                    ),
                     fit: BoxFit.cover,
                   ),
                   borderRadius: BorderRadius.circular(16.r),
@@ -30,13 +38,20 @@ class BigCart extends StatelessWidget {
               ),
               SizedBox(height: 16.h),
               Text(
-                "Қўрқув, ҳаяжон, ўзига ишонч ёки ҳеч нарсани ҳис қилмаслик (фотоҳикоя)",
+                popularModel.results!.isNotEmpty
+                    ? popularModel.results?.first.title ?? ''
+                    : '',
                 style: fonts.bold16.copyWith(fontSize: 18.sp),
               ),
               SizedBox(height: 10.h),
-              Text(
-                "Ўйлайман, шу ёшида илм олишга ҳаракат қиляпти. Сиз эса вақт ўтиб кетди, деб",
-                style: fonts.regular14.copyWith(color: colors.subtitle),
+              HTML.toRichText(
+                context,
+                popularModel.results!.isNotEmpty
+                    ? popularModel.results?.first.shortDescription ?? ''
+                    : '',
+                defaultTextStyle: fonts.regular14.copyWith(
+                  color: colors.subtitle,
+                ),
               ),
               GestureDetector(
                 onTap: () {},
@@ -47,7 +62,7 @@ class BigCart extends StatelessWidget {
               ),
               SizedBox(height: 10.h),
               const OldTime(),
-              const TileBuilder(),
+              TileBuilder(popularModel: popularModel),
             ],
           ),
         );

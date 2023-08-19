@@ -18,33 +18,57 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$HomeEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() get,
+    required TResult Function() getPopularPosts,
+    required TResult Function() getAuthorOffered,
+    required TResult Function() getArticles,
+    required TResult Function() getWather,
+    required TResult Function() getProcurment,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? get,
+    TResult? Function()? getPopularPosts,
+    TResult? Function()? getAuthorOffered,
+    TResult? Function()? getArticles,
+    TResult? Function()? getWather,
+    TResult? Function()? getProcurment,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? get,
+    TResult Function()? getPopularPosts,
+    TResult Function()? getAuthorOffered,
+    TResult Function()? getArticles,
+    TResult Function()? getWather,
+    TResult Function()? getProcurment,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Get value) get,
+    required TResult Function(_GetPopularPosts value) getPopularPosts,
+    required TResult Function(_GetAuthorOffered value) getAuthorOffered,
+    required TResult Function(_GetArticles value) getArticles,
+    required TResult Function(_GetWather value) getWather,
+    required TResult Function(_GetProcurment value) getProcurment,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Get value)? get,
+    TResult? Function(_GetPopularPosts value)? getPopularPosts,
+    TResult? Function(_GetAuthorOffered value)? getAuthorOffered,
+    TResult? Function(_GetArticles value)? getArticles,
+    TResult? Function(_GetWather value)? getWather,
+    TResult? Function(_GetProcurment value)? getProcurment,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Get value)? get,
+    TResult Function(_GetPopularPosts value)? getPopularPosts,
+    TResult Function(_GetAuthorOffered value)? getAuthorOffered,
+    TResult Function(_GetArticles value)? getArticles,
+    TResult Function(_GetWather value)? getWather,
+    TResult Function(_GetProcurment value)? getProcurment,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -68,32 +92,35 @@ class _$HomeEventCopyWithImpl<$Res, $Val extends HomeEvent>
 }
 
 /// @nodoc
-abstract class _$$_GetCopyWith<$Res> {
-  factory _$$_GetCopyWith(_$_Get value, $Res Function(_$_Get) then) =
-      __$$_GetCopyWithImpl<$Res>;
+abstract class _$$_GetPopularPostsCopyWith<$Res> {
+  factory _$$_GetPopularPostsCopyWith(
+          _$_GetPopularPosts value, $Res Function(_$_GetPopularPosts) then) =
+      __$$_GetPopularPostsCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_GetCopyWithImpl<$Res> extends _$HomeEventCopyWithImpl<$Res, _$_Get>
-    implements _$$_GetCopyWith<$Res> {
-  __$$_GetCopyWithImpl(_$_Get _value, $Res Function(_$_Get) _then)
+class __$$_GetPopularPostsCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$_GetPopularPosts>
+    implements _$$_GetPopularPostsCopyWith<$Res> {
+  __$$_GetPopularPostsCopyWithImpl(
+      _$_GetPopularPosts _value, $Res Function(_$_GetPopularPosts) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_Get implements _Get {
-  _$_Get();
+class _$_GetPopularPosts implements _GetPopularPosts {
+  _$_GetPopularPosts();
 
   @override
   String toString() {
-    return 'HomeEvent.get()';
+    return 'HomeEvent.getPopularPosts()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Get);
+        (other.runtimeType == runtimeType && other is _$_GetPopularPosts);
   }
 
   @override
@@ -102,27 +129,39 @@ class _$_Get implements _Get {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() get,
+    required TResult Function() getPopularPosts,
+    required TResult Function() getAuthorOffered,
+    required TResult Function() getArticles,
+    required TResult Function() getWather,
+    required TResult Function() getProcurment,
   }) {
-    return get();
+    return getPopularPosts();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? get,
+    TResult? Function()? getPopularPosts,
+    TResult? Function()? getAuthorOffered,
+    TResult? Function()? getArticles,
+    TResult? Function()? getWather,
+    TResult? Function()? getProcurment,
   }) {
-    return get?.call();
+    return getPopularPosts?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? get,
+    TResult Function()? getPopularPosts,
+    TResult Function()? getAuthorOffered,
+    TResult Function()? getArticles,
+    TResult Function()? getWather,
+    TResult Function()? getProcurment,
     required TResult orElse(),
   }) {
-    if (get != null) {
-      return get();
+    if (getPopularPosts != null) {
+      return getPopularPosts();
     }
     return orElse();
   }
@@ -130,39 +169,533 @@ class _$_Get implements _Get {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Get value) get,
+    required TResult Function(_GetPopularPosts value) getPopularPosts,
+    required TResult Function(_GetAuthorOffered value) getAuthorOffered,
+    required TResult Function(_GetArticles value) getArticles,
+    required TResult Function(_GetWather value) getWather,
+    required TResult Function(_GetProcurment value) getProcurment,
   }) {
-    return get(this);
+    return getPopularPosts(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Get value)? get,
+    TResult? Function(_GetPopularPosts value)? getPopularPosts,
+    TResult? Function(_GetAuthorOffered value)? getAuthorOffered,
+    TResult? Function(_GetArticles value)? getArticles,
+    TResult? Function(_GetWather value)? getWather,
+    TResult? Function(_GetProcurment value)? getProcurment,
   }) {
-    return get?.call(this);
+    return getPopularPosts?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Get value)? get,
+    TResult Function(_GetPopularPosts value)? getPopularPosts,
+    TResult Function(_GetAuthorOffered value)? getAuthorOffered,
+    TResult Function(_GetArticles value)? getArticles,
+    TResult Function(_GetWather value)? getWather,
+    TResult Function(_GetProcurment value)? getProcurment,
     required TResult orElse(),
   }) {
-    if (get != null) {
-      return get(this);
+    if (getPopularPosts != null) {
+      return getPopularPosts(this);
     }
     return orElse();
   }
 }
 
-abstract class _Get implements HomeEvent {
-  factory _Get() = _$_Get;
+abstract class _GetPopularPosts implements HomeEvent {
+  factory _GetPopularPosts() = _$_GetPopularPosts;
+}
+
+/// @nodoc
+abstract class _$$_GetAuthorOfferedCopyWith<$Res> {
+  factory _$$_GetAuthorOfferedCopyWith(
+          _$_GetAuthorOffered value, $Res Function(_$_GetAuthorOffered) then) =
+      __$$_GetAuthorOfferedCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_GetAuthorOfferedCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$_GetAuthorOffered>
+    implements _$$_GetAuthorOfferedCopyWith<$Res> {
+  __$$_GetAuthorOfferedCopyWithImpl(
+      _$_GetAuthorOffered _value, $Res Function(_$_GetAuthorOffered) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_GetAuthorOffered implements _GetAuthorOffered {
+  _$_GetAuthorOffered();
+
+  @override
+  String toString() {
+    return 'HomeEvent.getAuthorOffered()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_GetAuthorOffered);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getPopularPosts,
+    required TResult Function() getAuthorOffered,
+    required TResult Function() getArticles,
+    required TResult Function() getWather,
+    required TResult Function() getProcurment,
+  }) {
+    return getAuthorOffered();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getPopularPosts,
+    TResult? Function()? getAuthorOffered,
+    TResult? Function()? getArticles,
+    TResult? Function()? getWather,
+    TResult? Function()? getProcurment,
+  }) {
+    return getAuthorOffered?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getPopularPosts,
+    TResult Function()? getAuthorOffered,
+    TResult Function()? getArticles,
+    TResult Function()? getWather,
+    TResult Function()? getProcurment,
+    required TResult orElse(),
+  }) {
+    if (getAuthorOffered != null) {
+      return getAuthorOffered();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_GetPopularPosts value) getPopularPosts,
+    required TResult Function(_GetAuthorOffered value) getAuthorOffered,
+    required TResult Function(_GetArticles value) getArticles,
+    required TResult Function(_GetWather value) getWather,
+    required TResult Function(_GetProcurment value) getProcurment,
+  }) {
+    return getAuthorOffered(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_GetPopularPosts value)? getPopularPosts,
+    TResult? Function(_GetAuthorOffered value)? getAuthorOffered,
+    TResult? Function(_GetArticles value)? getArticles,
+    TResult? Function(_GetWather value)? getWather,
+    TResult? Function(_GetProcurment value)? getProcurment,
+  }) {
+    return getAuthorOffered?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_GetPopularPosts value)? getPopularPosts,
+    TResult Function(_GetAuthorOffered value)? getAuthorOffered,
+    TResult Function(_GetArticles value)? getArticles,
+    TResult Function(_GetWather value)? getWather,
+    TResult Function(_GetProcurment value)? getProcurment,
+    required TResult orElse(),
+  }) {
+    if (getAuthorOffered != null) {
+      return getAuthorOffered(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetAuthorOffered implements HomeEvent {
+  factory _GetAuthorOffered() = _$_GetAuthorOffered;
+}
+
+/// @nodoc
+abstract class _$$_GetArticlesCopyWith<$Res> {
+  factory _$$_GetArticlesCopyWith(
+          _$_GetArticles value, $Res Function(_$_GetArticles) then) =
+      __$$_GetArticlesCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_GetArticlesCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$_GetArticles>
+    implements _$$_GetArticlesCopyWith<$Res> {
+  __$$_GetArticlesCopyWithImpl(
+      _$_GetArticles _value, $Res Function(_$_GetArticles) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_GetArticles implements _GetArticles {
+  _$_GetArticles();
+
+  @override
+  String toString() {
+    return 'HomeEvent.getArticles()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_GetArticles);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getPopularPosts,
+    required TResult Function() getAuthorOffered,
+    required TResult Function() getArticles,
+    required TResult Function() getWather,
+    required TResult Function() getProcurment,
+  }) {
+    return getArticles();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getPopularPosts,
+    TResult? Function()? getAuthorOffered,
+    TResult? Function()? getArticles,
+    TResult? Function()? getWather,
+    TResult? Function()? getProcurment,
+  }) {
+    return getArticles?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getPopularPosts,
+    TResult Function()? getAuthorOffered,
+    TResult Function()? getArticles,
+    TResult Function()? getWather,
+    TResult Function()? getProcurment,
+    required TResult orElse(),
+  }) {
+    if (getArticles != null) {
+      return getArticles();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_GetPopularPosts value) getPopularPosts,
+    required TResult Function(_GetAuthorOffered value) getAuthorOffered,
+    required TResult Function(_GetArticles value) getArticles,
+    required TResult Function(_GetWather value) getWather,
+    required TResult Function(_GetProcurment value) getProcurment,
+  }) {
+    return getArticles(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_GetPopularPosts value)? getPopularPosts,
+    TResult? Function(_GetAuthorOffered value)? getAuthorOffered,
+    TResult? Function(_GetArticles value)? getArticles,
+    TResult? Function(_GetWather value)? getWather,
+    TResult? Function(_GetProcurment value)? getProcurment,
+  }) {
+    return getArticles?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_GetPopularPosts value)? getPopularPosts,
+    TResult Function(_GetAuthorOffered value)? getAuthorOffered,
+    TResult Function(_GetArticles value)? getArticles,
+    TResult Function(_GetWather value)? getWather,
+    TResult Function(_GetProcurment value)? getProcurment,
+    required TResult orElse(),
+  }) {
+    if (getArticles != null) {
+      return getArticles(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetArticles implements HomeEvent {
+  factory _GetArticles() = _$_GetArticles;
+}
+
+/// @nodoc
+abstract class _$$_GetWatherCopyWith<$Res> {
+  factory _$$_GetWatherCopyWith(
+          _$_GetWather value, $Res Function(_$_GetWather) then) =
+      __$$_GetWatherCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_GetWatherCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$_GetWather>
+    implements _$$_GetWatherCopyWith<$Res> {
+  __$$_GetWatherCopyWithImpl(
+      _$_GetWather _value, $Res Function(_$_GetWather) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_GetWather implements _GetWather {
+  _$_GetWather();
+
+  @override
+  String toString() {
+    return 'HomeEvent.getWather()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_GetWather);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getPopularPosts,
+    required TResult Function() getAuthorOffered,
+    required TResult Function() getArticles,
+    required TResult Function() getWather,
+    required TResult Function() getProcurment,
+  }) {
+    return getWather();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getPopularPosts,
+    TResult? Function()? getAuthorOffered,
+    TResult? Function()? getArticles,
+    TResult? Function()? getWather,
+    TResult? Function()? getProcurment,
+  }) {
+    return getWather?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getPopularPosts,
+    TResult Function()? getAuthorOffered,
+    TResult Function()? getArticles,
+    TResult Function()? getWather,
+    TResult Function()? getProcurment,
+    required TResult orElse(),
+  }) {
+    if (getWather != null) {
+      return getWather();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_GetPopularPosts value) getPopularPosts,
+    required TResult Function(_GetAuthorOffered value) getAuthorOffered,
+    required TResult Function(_GetArticles value) getArticles,
+    required TResult Function(_GetWather value) getWather,
+    required TResult Function(_GetProcurment value) getProcurment,
+  }) {
+    return getWather(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_GetPopularPosts value)? getPopularPosts,
+    TResult? Function(_GetAuthorOffered value)? getAuthorOffered,
+    TResult? Function(_GetArticles value)? getArticles,
+    TResult? Function(_GetWather value)? getWather,
+    TResult? Function(_GetProcurment value)? getProcurment,
+  }) {
+    return getWather?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_GetPopularPosts value)? getPopularPosts,
+    TResult Function(_GetAuthorOffered value)? getAuthorOffered,
+    TResult Function(_GetArticles value)? getArticles,
+    TResult Function(_GetWather value)? getWather,
+    TResult Function(_GetProcurment value)? getProcurment,
+    required TResult orElse(),
+  }) {
+    if (getWather != null) {
+      return getWather(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetWather implements HomeEvent {
+  factory _GetWather() = _$_GetWather;
+}
+
+/// @nodoc
+abstract class _$$_GetProcurmentCopyWith<$Res> {
+  factory _$$_GetProcurmentCopyWith(
+          _$_GetProcurment value, $Res Function(_$_GetProcurment) then) =
+      __$$_GetProcurmentCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_GetProcurmentCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$_GetProcurment>
+    implements _$$_GetProcurmentCopyWith<$Res> {
+  __$$_GetProcurmentCopyWithImpl(
+      _$_GetProcurment _value, $Res Function(_$_GetProcurment) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_GetProcurment implements _GetProcurment {
+  _$_GetProcurment();
+
+  @override
+  String toString() {
+    return 'HomeEvent.getProcurment()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_GetProcurment);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getPopularPosts,
+    required TResult Function() getAuthorOffered,
+    required TResult Function() getArticles,
+    required TResult Function() getWather,
+    required TResult Function() getProcurment,
+  }) {
+    return getProcurment();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getPopularPosts,
+    TResult? Function()? getAuthorOffered,
+    TResult? Function()? getArticles,
+    TResult? Function()? getWather,
+    TResult? Function()? getProcurment,
+  }) {
+    return getProcurment?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getPopularPosts,
+    TResult Function()? getAuthorOffered,
+    TResult Function()? getArticles,
+    TResult Function()? getWather,
+    TResult Function()? getProcurment,
+    required TResult orElse(),
+  }) {
+    if (getProcurment != null) {
+      return getProcurment();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_GetPopularPosts value) getPopularPosts,
+    required TResult Function(_GetAuthorOffered value) getAuthorOffered,
+    required TResult Function(_GetArticles value) getArticles,
+    required TResult Function(_GetWather value) getWather,
+    required TResult Function(_GetProcurment value) getProcurment,
+  }) {
+    return getProcurment(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_GetPopularPosts value)? getPopularPosts,
+    TResult? Function(_GetAuthorOffered value)? getAuthorOffered,
+    TResult? Function(_GetArticles value)? getArticles,
+    TResult? Function(_GetWather value)? getWather,
+    TResult? Function(_GetProcurment value)? getProcurment,
+  }) {
+    return getProcurment?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_GetPopularPosts value)? getPopularPosts,
+    TResult Function(_GetAuthorOffered value)? getAuthorOffered,
+    TResult Function(_GetArticles value)? getArticles,
+    TResult Function(_GetWather value)? getWather,
+    TResult Function(_GetProcurment value)? getProcurment,
+    required TResult orElse(),
+  }) {
+    if (getProcurment != null) {
+      return getProcurment(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetProcurment implements HomeEvent {
+  factory _GetProcurment() = _$_GetProcurment;
 }
 
 /// @nodoc
 mixin _$HomeState {
-  bool get value => throw _privateConstructorUsedError;
+  PopularModel? get popularModel => throw _privateConstructorUsedError;
+  PopularModel? get popularModelPinned => throw _privateConstructorUsedError;
+  WeatherModel? get weatherModel => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $HomeStateCopyWith<HomeState> get copyWith =>
@@ -174,7 +707,10 @@ abstract class $HomeStateCopyWith<$Res> {
   factory $HomeStateCopyWith(HomeState value, $Res Function(HomeState) then) =
       _$HomeStateCopyWithImpl<$Res, HomeState>;
   @useResult
-  $Res call({bool value});
+  $Res call(
+      {PopularModel? popularModel,
+      PopularModel? popularModelPinned,
+      WeatherModel? weatherModel});
 }
 
 /// @nodoc
@@ -190,13 +726,23 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? value = null,
+    Object? popularModel = freezed,
+    Object? popularModelPinned = freezed,
+    Object? weatherModel = freezed,
   }) {
     return _then(_value.copyWith(
-      value: null == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as bool,
+      popularModel: freezed == popularModel
+          ? _value.popularModel
+          : popularModel // ignore: cast_nullable_to_non_nullable
+              as PopularModel?,
+      popularModelPinned: freezed == popularModelPinned
+          ? _value.popularModelPinned
+          : popularModelPinned // ignore: cast_nullable_to_non_nullable
+              as PopularModel?,
+      weatherModel: freezed == weatherModel
+          ? _value.weatherModel
+          : weatherModel // ignore: cast_nullable_to_non_nullable
+              as WeatherModel?,
     ) as $Val);
   }
 }
@@ -208,7 +754,10 @@ abstract class _$$_HomeStateCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
       __$$_HomeStateCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({bool value});
+  $Res call(
+      {PopularModel? popularModel,
+      PopularModel? popularModelPinned,
+      WeatherModel? weatherModel});
 }
 
 /// @nodoc
@@ -222,13 +771,23 @@ class __$$_HomeStateCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? value = null,
+    Object? popularModel = freezed,
+    Object? popularModelPinned = freezed,
+    Object? weatherModel = freezed,
   }) {
     return _then(_$_HomeState(
-      value: null == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as bool,
+      popularModel: freezed == popularModel
+          ? _value.popularModel
+          : popularModel // ignore: cast_nullable_to_non_nullable
+              as PopularModel?,
+      popularModelPinned: freezed == popularModelPinned
+          ? _value.popularModelPinned
+          : popularModelPinned // ignore: cast_nullable_to_non_nullable
+              as PopularModel?,
+      weatherModel: freezed == weatherModel
+          ? _value.weatherModel
+          : weatherModel // ignore: cast_nullable_to_non_nullable
+              as WeatherModel?,
     ));
   }
 }
@@ -236,15 +795,24 @@ class __$$_HomeStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_HomeState implements _HomeState {
-  const _$_HomeState({this.value = true});
+  const _$_HomeState(
+      {this.popularModel = null,
+      this.popularModelPinned = null,
+      this.weatherModel = null});
 
   @override
   @JsonKey()
-  final bool value;
+  final PopularModel? popularModel;
+  @override
+  @JsonKey()
+  final PopularModel? popularModelPinned;
+  @override
+  @JsonKey()
+  final WeatherModel? weatherModel;
 
   @override
   String toString() {
-    return 'HomeState(value: $value)';
+    return 'HomeState(popularModel: $popularModel, popularModelPinned: $popularModelPinned, weatherModel: $weatherModel)';
   }
 
   @override
@@ -252,11 +820,17 @@ class _$_HomeState implements _HomeState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_HomeState &&
-            (identical(other.value, value) || other.value == value));
+            (identical(other.popularModel, popularModel) ||
+                other.popularModel == popularModel) &&
+            (identical(other.popularModelPinned, popularModelPinned) ||
+                other.popularModelPinned == popularModelPinned) &&
+            (identical(other.weatherModel, weatherModel) ||
+                other.weatherModel == weatherModel));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, value);
+  int get hashCode =>
+      Object.hash(runtimeType, popularModel, popularModelPinned, weatherModel);
 
   @JsonKey(ignore: true)
   @override
@@ -266,10 +840,17 @@ class _$_HomeState implements _HomeState {
 }
 
 abstract class _HomeState implements HomeState {
-  const factory _HomeState({final bool value}) = _$_HomeState;
+  const factory _HomeState(
+      {final PopularModel? popularModel,
+      final PopularModel? popularModelPinned,
+      final WeatherModel? weatherModel}) = _$_HomeState;
 
   @override
-  bool get value;
+  PopularModel? get popularModel;
+  @override
+  PopularModel? get popularModelPinned;
+  @override
+  WeatherModel? get weatherModel;
   @override
   @JsonKey(ignore: true)
   _$$_HomeStateCopyWith<_$_HomeState> get copyWith =>

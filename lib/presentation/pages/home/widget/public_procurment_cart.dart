@@ -4,9 +4,6 @@ import 'package:platina/presentation/pages/home/widget/old_time.dart';
 import 'package:platina/presentation/pages/home/widget/tile_builder.dart';
 import 'package:platina/presentation/styles/theme_warpper.dart';
 
-
-
-
 class PublicProcurmentCart extends StatelessWidget {
   const PublicProcurmentCart({super.key});
 
@@ -37,9 +34,9 @@ class PublicProcurmentCart extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.only(top: 10.h, bottom: 16.h),
-              child: const OldTime(isSociety: false),
+              child: OldTime(isSociety: false),
             ),
-            const TileBuilder(),
+            // const TileBuilder(),
           ],
         ),
       );
