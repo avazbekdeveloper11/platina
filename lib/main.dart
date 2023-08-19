@@ -19,7 +19,8 @@ void main() async {
             Locale('en', 'US'),
           ],
           path: 'assets/translation',
-          fallbackLocale: const Locale('en', 'US'),
+          startLocale: const Locale('ru', 'RU'),
+          fallbackLocale: const Locale('ru', 'RU'),
           child: const AppWidget(),
         );
       },

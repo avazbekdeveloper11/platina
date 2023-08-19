@@ -18,13 +18,12 @@ class AppWidget extends StatelessWidget {
     return FutureBuilder<List>(
       future: Future.wait([
         PreferenceService.create,
-        ConnectivityX.create,
+        ConnectivityX().create(),
         GridTheme.create,
       ]),
       builder: (context, AsyncSnapshot<List<dynamic>> snap) {
         if (snap.hasData && snap.data is List<dynamic>) {
           final data = snap.data;
-          // final PreferenceService pref = data?[0];
           final GridTheme theme = data?[2];
           return ChangeNotifierProvider(
             create: (_) => theme,

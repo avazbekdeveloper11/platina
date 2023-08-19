@@ -29,7 +29,17 @@ class CustomColorSet {
 
   final Color secondaryVariant;
 
-  CustomColorSet._( {
+  final Color subtitle;
+
+  final Color downRed;
+
+  final Color redishOrange;
+
+  final Color link;
+
+  final Color dividerColor;
+
+  CustomColorSet._({
     required this.secondaryVariant,
     required this.text,
     required this.bodyText,
@@ -44,6 +54,11 @@ class CustomColorSet {
     required this.lightTextBody,
     required this.error,
     required this.transparent,
+    required this.downRed,
+    required this.subtitle,
+    required this.link,
+    required this.redishOrange,
+    required this.dividerColor,
   });
 
   factory CustomColorSet._create(CustomThemeMode mode) {
@@ -63,7 +78,7 @@ class CustomColorSet {
 
     final grey = isLight ? Style.grey : Style.secondary;
 
-    final backgroundColor = isLight ? Style.white : Style.text;
+    final backgroundColor = isLight ? Style.backgroundColor : Style.text;
 
     final backgroundColorVariant = isLight ? Style.white : Style.text;
 
@@ -76,6 +91,15 @@ class CustomColorSet {
 
     const secondaryVariant = Style.secondaryVariant;
 
+    const downRed = Style.downRed;
+
+    const subtitle = Style.subtitle;
+
+    const link = Style.link;
+
+    const redishOrange = Style.redishOrange;
+
+    const dividerColor = Style.dividerColor;
 
     return CustomColorSet._(
       text: text,
@@ -90,8 +114,13 @@ class CustomColorSet {
       secondary: secondary,
       lightTextBody: lightTextBody,
       error: error,
-      transparent:transparent,
+      transparent: transparent,
       secondaryVariant: secondaryVariant,
+      downRed: downRed,
+      subtitle: subtitle,
+      link: link,
+      redishOrange: redishOrange,
+      dividerColor: dividerColor,
     );
   }
 

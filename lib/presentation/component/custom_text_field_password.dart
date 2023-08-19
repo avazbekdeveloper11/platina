@@ -44,7 +44,7 @@ class _CustomTextFieldPasswordState extends State<CustomTextFieldPassword> {
           widget.title.isNotEmpty
               ? Text(
                   widget.title,
-                  style: fonts.subtitle1.copyWith(
+                  style: fonts.regular12.copyWith(
                     color: widget.error == null ? colors.text : colors.error,
                   ),
                 )
@@ -54,7 +54,7 @@ class _CustomTextFieldPasswordState extends State<CustomTextFieldPassword> {
             height: widget.error != null ? null : 50.h,
             child: TextFormField(
               controller: widget.controller,
-              style: fonts.bodyText2.copyWith(color: colors.text),
+              style: fonts.regular12.copyWith(color: colors.text),
               obscureText: widget.isPassword && isUnViziable,
               keyboardType: _getKeyboardType(),
               decoration: InputDecoration(
@@ -83,9 +83,9 @@ class _CustomTextFieldPasswordState extends State<CustomTextFieldPassword> {
                   borderSide: BorderSide(color: colors.primary, width: 1),
                 ),
                 hintText: widget.hintText,
-                hintStyle: fonts.bodyText1,
+                hintStyle: fonts.regular16,
                 errorText: widget.error,
-                errorStyle: fonts.caption.copyWith(color: colors.error),
+                errorStyle: fonts.regular12.copyWith(color: colors.error),
                 contentPadding: EdgeInsets.only(left: 12.w),
               ),
             ),

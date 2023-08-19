@@ -34,21 +34,21 @@ class _NoConnectionState extends State<NoConnection> {
                 // : icons.noConnectionLightSvg),
                 // ),
                 SizedBox(height: 25.h),
-                Text('connection_is_afk'.tr(), style: fonts.headline3),
+                Text('connection_is_afk'.tr(), style: fonts.regular12),
                 SizedBox(height: 20.h),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 60.w),
                   child: Text(
                     'no_connection_body'.tr(),
                     textAlign: TextAlign.center,
-                    style: fonts.subtitle1,
+                    style: fonts.regular12,
                   ),
                 ),
                 SizedBox(height: 20.h),
                 TextButton(
                   onPressed: () async {
                     EasyLoading.show();
-                    bool result = await ConnectivityX.create;
+                    bool result = await ConnectivityX().create();
                     if (result) {
                       Navigator.pushAndRemoveUntil(
                           context, Routes.getAppWidget(), (route) => false);

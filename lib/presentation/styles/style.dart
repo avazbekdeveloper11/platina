@@ -7,7 +7,7 @@ class Style {
 
   static const Color iconSelect = Color(0xff334681);
 
-  static const Color primary = Color(0xff377DFF);
+  static const Color primary = Color(0XFF1D3068);
 
   static const Color secondary = Color(0xffBCDCFF);
 
@@ -17,8 +17,7 @@ class Style {
 
   static const Color white = Color(0xffffffff);
 
-
-  static const Color text = Color(0xff333333);
+  static const Color text = Color(0xff1D3068);
 
   static const Color bodyText = Color(0xff696A6F);
 
@@ -30,12 +29,23 @@ class Style {
 
   static const Color transparent = Colors.transparent;
 
+  static const Color downRed = Color(0XFFE50029);
+
+  static const Color subtitle = Color(0XFF737C98);
+
+  static const Color link = Color(0XFF0066CC);
+
+  static const Color redishOrange = Color(0XFFFF7D25);
+
+  static const Color dividerColor = Color(0XFFD5DDF3);
+
+  static const Color backgroundColor = Color(0XFFF7F8FF);
+
   static const BoxShadow blueIconShadow = BoxShadow(
     color: Color(0x20696A6F),
     blurRadius: 12,
     spreadRadius: 2,
   );
-
 
   static TextStyle regular24({double size = 24, Color color = text}) {
     return TextStyle(

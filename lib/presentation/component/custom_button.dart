@@ -37,7 +37,7 @@ class CustomOutlinedButton extends StatelessWidget {
               padding: EdgeInsets.symmetric(vertical: 12.h, horizontal: 42.w),
               child: Text(
                 title,
-                style: fonts.subtitle1.copyWith(color: colors.text),
+                style: fonts.regular12.copyWith(color: colors.text),
               ),
             ),
           ),

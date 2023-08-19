@@ -1,30 +1,36 @@
 part of 'theme.dart';
 
 class FontSet {
-  final TextStyle headline3;
-  final TextStyle subtitle1;
-  final TextStyle subtitle2;
-  final TextStyle bodyText1;
-  final TextStyle bodyText2;
-  final TextStyle caption;
+  final TextStyle medium20;
+  final TextStyle medium16;
+  final TextStyle bold16;
+  final TextStyle medium14;
+  final TextStyle semiBold16;
+  final TextStyle regular14;
+  final TextStyle regular16;
+  final TextStyle regular12;
 
   FontSet._({
-    required this.headline3,
-    required this.subtitle1,
-    required this.subtitle2,
-    required this.bodyText1,
-    required this.bodyText2,
-    required this.caption,
+    required this.medium20,
+    required this.medium16,
+    required this.bold16,
+    required this.medium14,
+    required this.semiBold16,
+    required this.regular14,
+    required this.regular16,
+    required this.regular12,
   });
 
   static FontSet createOrUpdate(CustomColorSet colors) {
     return FontSet._(
-      headline3: Style.medium20(size: 20.sp, color: colors.text),
-      subtitle1: Style.medium14(size: 14.sp, color: colors.text),
-      subtitle2: Style.semiBold16(size: 16.sp),
-      bodyText1: Style.regular14(size: 14.sp, color: colors.subText),
-      bodyText2: Style.regular16(size: 16.sp, color: colors.subText),
-      caption: Style.regular12(size: 12.sp),
+      medium20: Style.medium20(size: 20.sp, color: colors.text),
+      medium16: Style.medium16(size: 16.sp, color: colors.text),
+      medium14: Style.medium14(size: 14.sp, color: colors.text),
+      semiBold16: Style.semiBold16(size: 16.sp),
+      regular14: Style.regular14(size: 14.sp, color: colors.text),
+      regular16: Style.regular16(size: 16.sp, color: colors.text),
+      regular12: Style.regular12(size: 12.sp),
+      bold16: Style.bold16(size: 16.sp, color: colors.text),
     );
   }
 }

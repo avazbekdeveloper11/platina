@@ -1,4 +1,3 @@
-import 'package:platina/infrastructure/services/connectivity.dart';
 import 'package:platina/presentation/styles/theme_warpper.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
@@ -39,12 +38,12 @@ class NoInernetComponent extends StatelessWidget {
                         borderRadius: BorderRadius.circular(50)),
                   ),
                   onPressed: () async {
-                    bool result = await ConnectivityX.create;
-                    if (result) {
-                      // ignore: use_build_context_synchronously
-                      // Navigator.pushAndRemoveUntil(context,
-                      //     Routes.getBottomNavBar(context), (route) => false);
-                    }
+                    // bool result = await ConnectivityX.;
+                    // if (result) {
+                    // ignore: use_build_context_synchronously
+                    // Navigator.pushAndRemoveUntil(context,
+                    //     Routes.getBottomNavBar(context), (route) => false);
+                    // }
                     // if (isOnline) {
                     //   Navigator.pushAndRemoveUntil(context,
                     //       Routes.getBottomNavBar(context), (route) => false);

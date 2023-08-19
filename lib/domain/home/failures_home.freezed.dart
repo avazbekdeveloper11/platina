@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'failures_cat.dart';
+part of 'failures_home.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$CatFailure {
+mixin _$HomeFailure {
   String get message => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -63,23 +63,23 @@ mixin _$CatFailure {
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $CatFailureCopyWith<CatFailure> get copyWith =>
+  $HomeFailureCopyWith<HomeFailure> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $CatFailureCopyWith<$Res> {
-  factory $CatFailureCopyWith(
-          CatFailure value, $Res Function(CatFailure) then) =
-      _$CatFailureCopyWithImpl<$Res, CatFailure>;
+abstract class $HomeFailureCopyWith<$Res> {
+  factory $HomeFailureCopyWith(
+          HomeFailure value, $Res Function(HomeFailure) then) =
+      _$HomeFailureCopyWithImpl<$Res, HomeFailure>;
   @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class _$CatFailureCopyWithImpl<$Res, $Val extends CatFailure>
-    implements $CatFailureCopyWith<$Res> {
-  _$CatFailureCopyWithImpl(this._value, this._then);
+class _$HomeFailureCopyWithImpl<$Res, $Val extends HomeFailure>
+    implements $HomeFailureCopyWith<$Res> {
+  _$HomeFailureCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -102,7 +102,7 @@ class _$CatFailureCopyWithImpl<$Res, $Val extends CatFailure>
 
 /// @nodoc
 abstract class _$$InvalidCredentialsCopyWith<$Res>
-    implements $CatFailureCopyWith<$Res> {
+    implements $HomeFailureCopyWith<$Res> {
   factory _$$InvalidCredentialsCopyWith(_$InvalidCredentials value,
           $Res Function(_$InvalidCredentials) then) =
       __$$InvalidCredentialsCopyWithImpl<$Res>;
@@ -113,7 +113,7 @@ abstract class _$$InvalidCredentialsCopyWith<$Res>
 
 /// @nodoc
 class __$$InvalidCredentialsCopyWithImpl<$Res>
-    extends _$CatFailureCopyWithImpl<$Res, _$InvalidCredentials>
+    extends _$HomeFailureCopyWithImpl<$Res, _$InvalidCredentials>
     implements _$$InvalidCredentialsCopyWith<$Res> {
   __$$InvalidCredentialsCopyWithImpl(
       _$InvalidCredentials _value, $Res Function(_$InvalidCredentials) _then)
@@ -143,7 +143,7 @@ class _$InvalidCredentials implements InvalidCredentials {
 
   @override
   String toString() {
-    return 'CatFailure.invalidCredential(message: $message)';
+    return 'HomeFailure.invalidCredential(message: $message)';
   }
 
   @override
@@ -233,7 +233,7 @@ class _$InvalidCredentials implements InvalidCredentials {
   }
 }
 
-abstract class InvalidCredentials implements CatFailure {
+abstract class InvalidCredentials implements HomeFailure {
   const factory InvalidCredentials({required final String message}) =
       _$InvalidCredentials;
 
@@ -247,7 +247,7 @@ abstract class InvalidCredentials implements CatFailure {
 
 /// @nodoc
 abstract class _$$NetworkFailureCopyWith<$Res>
-    implements $CatFailureCopyWith<$Res> {
+    implements $HomeFailureCopyWith<$Res> {
   factory _$$NetworkFailureCopyWith(
           _$NetworkFailure value, $Res Function(_$NetworkFailure) then) =
       __$$NetworkFailureCopyWithImpl<$Res>;
@@ -258,7 +258,7 @@ abstract class _$$NetworkFailureCopyWith<$Res>
 
 /// @nodoc
 class __$$NetworkFailureCopyWithImpl<$Res>
-    extends _$CatFailureCopyWithImpl<$Res, _$NetworkFailure>
+    extends _$HomeFailureCopyWithImpl<$Res, _$NetworkFailure>
     implements _$$NetworkFailureCopyWith<$Res> {
   __$$NetworkFailureCopyWithImpl(
       _$NetworkFailure _value, $Res Function(_$NetworkFailure) _then)
@@ -288,7 +288,7 @@ class _$NetworkFailure implements NetworkFailure {
 
   @override
   String toString() {
-    return 'CatFailure.networkFailure(message: $message)';
+    return 'HomeFailure.networkFailure(message: $message)';
   }
 
   @override
@@ -377,7 +377,7 @@ class _$NetworkFailure implements NetworkFailure {
   }
 }
 
-abstract class NetworkFailure implements CatFailure {
+abstract class NetworkFailure implements HomeFailure {
   const factory NetworkFailure({required final String message}) =
       _$NetworkFailure;
 
@@ -390,7 +390,7 @@ abstract class NetworkFailure implements CatFailure {
 }
 
 /// @nodoc
-abstract class _$$UnknownCopyWith<$Res> implements $CatFailureCopyWith<$Res> {
+abstract class _$$UnknownCopyWith<$Res> implements $HomeFailureCopyWith<$Res> {
   factory _$$UnknownCopyWith(_$Unknown value, $Res Function(_$Unknown) then) =
       __$$UnknownCopyWithImpl<$Res>;
   @override
@@ -400,7 +400,7 @@ abstract class _$$UnknownCopyWith<$Res> implements $CatFailureCopyWith<$Res> {
 
 /// @nodoc
 class __$$UnknownCopyWithImpl<$Res>
-    extends _$CatFailureCopyWithImpl<$Res, _$Unknown>
+    extends _$HomeFailureCopyWithImpl<$Res, _$Unknown>
     implements _$$UnknownCopyWith<$Res> {
   __$$UnknownCopyWithImpl(_$Unknown _value, $Res Function(_$Unknown) _then)
       : super(_value, _then);
@@ -429,7 +429,7 @@ class _$Unknown implements Unknown {
 
   @override
   String toString() {
-    return 'CatFailure.unknown(message: $message)';
+    return 'HomeFailure.unknown(message: $message)';
   }
 
   @override
@@ -518,7 +518,7 @@ class _$Unknown implements Unknown {
   }
 }
 
-abstract class Unknown implements CatFailure {
+abstract class Unknown implements HomeFailure {
   const factory Unknown({required final String message}) = _$Unknown;
 
   @override

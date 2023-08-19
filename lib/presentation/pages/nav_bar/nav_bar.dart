@@ -1,5 +1,8 @@
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:platina/application/bottom_nav_bar_cubit/bottomnavbar_cubit.dart';
 import 'package:platina/presentation/pages/home/home_page.dart';
+import 'package:platina/presentation/pages/page_not_found/page_not_found.dart';
 import 'package:platina/presentation/styles/theme_warpper.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +30,13 @@ class _BottomNavBarState extends State<BottomNavBar> {
               // ? Body
               body: IndexedStack(
                 index: context.watch<BottomNavbarCubit>().currentIndex,
-                children: const [HomePage(), Scaffold()],
+                children: const [
+                  HomePage(),
+                  PageNotFound(),
+                  PageNotFound(),
+                  PageNotFound(),
+                  PageNotFound(),
+                ],
               ),
               // ? Bottomnavigationbar
               bottomNavigationBar: BottomNavigationBar(
@@ -35,20 +44,40 @@ class _BottomNavBarState extends State<BottomNavBar> {
                   context.read<BottomNavbarCubit>().changeIndex(index);
                 },
                 currentIndex: context.watch<BottomNavbarCubit>().currentIndex,
-                selectedItemColor: colors.text,
+                selectedFontSize: 12.sp,
+                unselectedFontSize: 12.sp,
                 showUnselectedLabels: true,
+                selectedItemColor: colors.text,
                 unselectedItemColor: colors.grey,
+                selectedLabelStyle: fonts.medium14.copyWith(fontSize: 12.sp),
+                unselectedLabelStyle: fonts.medium14.copyWith(fontSize: 12.sp),
                 type: BottomNavigationBarType.fixed,
-                unselectedLabelStyle: TextStyle(color: colors.icon),
                 landscapeLayout: BottomNavigationBarLandscapeLayout.spread,
                 items: <BottomNavigationBarItem>[
                   BottomNavigationBarItem(
-                    icon: const Icon(Icons.category),
-                    label: "home".tr(),
+                    icon: SvgPicture.asset(icons.home),
+                    activeIcon: SvgPicture.asset(icons.homeSelected),
+                    label: 'home'.tr(),
                   ),
                   BottomNavigationBarItem(
-                    icon: const Icon(Icons.category),
-                    label: "katalog".tr(),
+                    icon: SvgPicture.asset(icons.tape),
+                    activeIcon: SvgPicture.asset(icons.tapeSelected),
+                    label: 'tape'.tr(),
+                  ),
+                  BottomNavigationBarItem(
+                    icon: SvgPicture.asset(icons.popular),
+                    activeIcon: SvgPicture.asset(icons.popularSelected),
+                    label: 'popular'.tr(),
+                  ),
+                  BottomNavigationBarItem(
+                    icon: SvgPicture.asset(icons.article),
+                    activeIcon: SvgPicture.asset(icons.articleSelected),
+                    label: 'article'.tr(),
+                  ),
+                  BottomNavigationBarItem(
+                    icon: SvgPicture.asset(icons.video),
+                    activeIcon: SvgPicture.asset(icons.videoSelected),
+                    label: 'video'.tr(),
                   ),
                 ],
               ),
