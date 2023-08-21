@@ -12,9 +12,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class BottomNavBar extends StatefulWidget {
-  final String token;
-
-  const BottomNavBar({Key? key, required this.token}) : super(key: key);
+  const BottomNavBar({Key? key}) : super(key: key);
 
   @override
   State<BottomNavBar> createState() => _BottomNavBarState();

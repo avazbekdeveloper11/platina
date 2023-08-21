@@ -36,7 +36,7 @@ class AppWidget extends StatelessWidget {
                 localizationsDelegates: context.localizationDelegates,
                 home: BlocProvider(
                   create: (context) => BottomNavbarCubit(),
-                  child: const BottomNavBar(token: ''),
+                  child: const BottomNavBar(),
                 ),
               );
             },

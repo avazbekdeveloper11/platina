@@ -27,13 +27,13 @@ class _CurrencyAndWatherTitleState extends State<CurrencyAndWatherTitle> {
   Widget build(BuildContext context) {
     return ThemeWrapper(
       builder: (context, colors, fonts, icons, controller) {
-        return Padding(
-          padding: EdgeInsets.only(top: 16.h, bottom: 8.h),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 16.w),
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16.w),
+              child: SizedBox(
+                height: 48.h,
                 child: Row(
                   children: [
                     GestureDetector(
@@ -101,7 +101,6 @@ class _CurrencyAndWatherTitleState extends State<CurrencyAndWatherTitle> {
                                     null
                                 ? Image.network(
                                     'https:${widget.weatherModel!.current!.condition!.icon}',
-                                    width: 32.sp,
                                   )
                                 : const SizedBox(),
                             Text(
@@ -115,12 +114,12 @@ class _CurrencyAndWatherTitleState extends State<CurrencyAndWatherTitle> {
                   ],
                 ),
               ),
-              // ? Currency Tile
+            ),
+            // ? Currency Tile
 
-              currencyAnimatedTile(colors, fonts),
-              weatherAnimatedTile(colors, fonts)
-            ],
-          ),
+            currencyAnimatedTile(colors, fonts),
+            weatherAnimatedTile(colors, fonts)
+          ],
         );
       },
     );
