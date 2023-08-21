@@ -28,7 +28,7 @@ class _CurrencyAndWatherTitleState extends State<CurrencyAndWatherTitle> {
     return ThemeWrapper(
       builder: (context, colors, fonts, icons, controller) {
         return Padding(
-          padding: EdgeInsets.only(top: 16.h, bottom: 20),
+          padding: EdgeInsets.only(top: 16.h, bottom: 8.h),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
