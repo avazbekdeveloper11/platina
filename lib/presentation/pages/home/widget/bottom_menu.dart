@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -37,15 +38,15 @@ class BottomMenu extends StatelessWidget {
                   spacing: 20.w,
                   children: [
                     Text(
-                      'Сайт ҳақида',
+                      'about_the_site'.tr(),
                       style: fonts.medium14,
                     ),
                     Text(
-                      'Реклама',
+                      'advertising'.tr(),
                       style: fonts.medium14,
                     ),
                     Text(
-                      'Маҳфийлик сиёсати',
+                      'privacy_policy'.tr(),
                       style: fonts.medium14,
                     ),
                   ],
@@ -54,13 +55,10 @@ class BottomMenu extends StatelessWidget {
                   padding: EdgeInsets.symmetric(vertical: 12.h),
                   child: RichText(
                     text: TextSpan(
-                      text:
-                          '© 2023 Platina.uz. Барча ҳуқуқлар ҳимояланган. «Platina.uz» сайтида жойланган маълумотлар муаллифнинг шахсий фикри. Сайтда жойланган ҳар қандай материалларни ёзма рухсатсиз фойдаланиш таъқиқланади.',
-                      children: const [
-                        TextSpan(text: '\n\n'),
-                        TextSpan(
-                            text:
-                                'Ўзбекистон Республикаси Президенти Администрацияси ҳузуридаги Ахборот ва оммавий коммуникациялар агентлиги томонидан 02.12.2022 санасида №051412 сонли гувоҳнома билан ОАВ сифатида рўйхатга олинган'),
+                      text: 'bottom_menu_1'.tr(),
+                      children: [
+                        const TextSpan(text: '\n\n'),
+                        TextSpan(text: 'bottom_menu_2'.tr()),
                       ],
                       style: fonts.regular12.copyWith(color: colors.subtitle),
                     ),
@@ -111,7 +109,7 @@ class BottomMenu extends StatelessWidget {
                     SvgPicture.asset(icons.redmedia),
                     SizedBox(width: 10.w),
                     Text(
-                      'IT-компанияси томонидан ишлаб чиқилди',
+                      'development_by'.tr(),
                       style: fonts.regular12.copyWith(color: colors.subtitle),
                     ),
                   ],

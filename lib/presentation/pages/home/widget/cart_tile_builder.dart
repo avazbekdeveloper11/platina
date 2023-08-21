@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:platina/infrastructure/models/popular_model/popular_model.dart';
@@ -21,7 +22,7 @@ class CartTitleBuilder extends StatelessWidget {
           ),
           child: Column(
             children: [
-              const ArrowTile(title: 'Мақолалар'),
+              ArrowTile(title: 'articles'.tr()),
               ListView.separated(
                 itemCount: (articlesModel.results?.length ?? 0) > 6
                     ? 6

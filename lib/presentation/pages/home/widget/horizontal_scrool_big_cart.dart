@@ -20,7 +20,7 @@ class HorizontalScroolBigCart extends StatelessWidget {
             children: [
               ArrowTile(title: "author_offered".tr()),
               SizedBox(
-                height: 320.h,
+                height: 308.h,
                 width: double.infinity,
                 child: ListView.builder(
                   padding: EdgeInsets.only(right: 16.h),

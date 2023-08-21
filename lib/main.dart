@@ -17,7 +17,7 @@ void main() async {
             Locale('ru', 'RU'),
             Locale('uz', 'UZ'),
           ],
-          path: 'assets/translation',
+          path: 'assets/translation/',
           startLocale: const Locale('uz', 'UZ'),
           fallbackLocale: const Locale('ru', 'RU'),
           child: const AppWidget(),

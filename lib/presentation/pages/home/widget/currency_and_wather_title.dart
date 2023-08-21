@@ -33,7 +33,7 @@ class _CurrencyAndWatherTitleState extends State<CurrencyAndWatherTitle> {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.w),
               child: SizedBox(
-                height: 60.h,
+                height: 48.h,
                 child: Row(
                   children: [
                     GestureDetector(
@@ -126,7 +126,9 @@ class _CurrencyAndWatherTitleState extends State<CurrencyAndWatherTitle> {
             // ? Currency Tile
 
             currencyAnimatedTile(colors, fonts),
-            weatherAnimatedTile(colors, fonts),
+            weatherAnimatedTile(colors, fonts)
+
+   
           ],
         );
       },

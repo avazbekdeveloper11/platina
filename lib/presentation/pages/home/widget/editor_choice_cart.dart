@@ -35,7 +35,7 @@ class EditorChoiceCart extends StatelessWidget {
                 width: 200.w,
                 margin: EdgeInsets.symmetric(vertical: 16.h),
                 child: Text(
-                  "Қўрқув, ҳаяжон, ўзига ишонч ёки ҳеч нарсани ҳис қилмаслик (фотоҳикоя)",
+                  authorOfferedResultModel?.title ?? '',
                   style: fonts.bold16,
                   maxLines: 3,
                 ),
