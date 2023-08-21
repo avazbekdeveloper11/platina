@@ -16,10 +16,9 @@ void main() async {
           supportedLocales: const [
             Locale('ru', 'RU'),
             Locale('uz', 'UZ'),
-            Locale('en', 'US'),
           ],
           path: 'assets/translation',
-          startLocale: const Locale('ru', 'RU'),
+          startLocale: const Locale('uz', 'UZ'),
           fallbackLocale: const Locale('ru', 'RU'),
           child: const AppWidget(),
         );

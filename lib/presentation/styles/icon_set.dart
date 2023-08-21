@@ -30,6 +30,10 @@ class IconSet {
   final String youtube;
   final String tiktok;
   final String redmedia;
+  final String russia;
+  final String euro;
+  final String startDotDislabed;
+  final String homeScreen;
 
   IconSet._({
     required this.twitter,
@@ -61,6 +65,10 @@ class IconSet {
     required this.tiktok,
     required this.youtube,
     required this.redmedia,
+    required this.russia,
+    required this.euro,
+    required this.startDotDislabed,
+    required this.homeScreen,
   });
 
   static IconSet get create {
@@ -84,7 +92,9 @@ class IconSet {
       drawer: 'assets/icons/svg/drawer.svg',
       appLogo: 'assets/icons/svg/appLogo.svg',
       search: 'assets/icons/svg/search.svg',
-      usd: 'assets/icons/svg/usd.svg',
+      usd: 'assets/icons/png/usd.png',
+      russia: 'assets/icons/png/russia.png',
+      euro: 'assets/icons/png/euro.png',
       starDot: 'assets/icons/svg/star_dot.svg',
       arrowRight: 'assets/icons/svg/arrow_right.svg',
       telegram: 'assets/icons/svg/telegram.svg',
@@ -94,6 +104,8 @@ class IconSet {
       tiktok: 'assets/icons/svg/tik_tok.svg',
       facebook: 'assets/icons/svg/facebook.svg',
       redmedia: 'assets/icons/svg/redmedia.svg',
+      startDotDislabed: 'assets/icons/svg/star_dot_dislabed.svg',
+      homeScreen: 'assets/images/home_screen.png',
     );
   }
 }

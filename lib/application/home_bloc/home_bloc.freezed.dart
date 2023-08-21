@@ -23,6 +23,9 @@ mixin _$HomeEvent {
     required TResult Function() getArticles,
     required TResult Function() getWather,
     required TResult Function() getProcurment,
+    required TResult Function() getBusiness,
+    required TResult Function() getCategories,
+    required TResult Function(String text) search,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -32,6 +35,9 @@ mixin _$HomeEvent {
     TResult? Function()? getArticles,
     TResult? Function()? getWather,
     TResult? Function()? getProcurment,
+    TResult? Function()? getBusiness,
+    TResult? Function()? getCategories,
+    TResult? Function(String text)? search,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -41,6 +47,9 @@ mixin _$HomeEvent {
     TResult Function()? getArticles,
     TResult Function()? getWather,
     TResult Function()? getProcurment,
+    TResult Function()? getBusiness,
+    TResult Function()? getCategories,
+    TResult Function(String text)? search,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -51,6 +60,9 @@ mixin _$HomeEvent {
     required TResult Function(_GetArticles value) getArticles,
     required TResult Function(_GetWather value) getWather,
     required TResult Function(_GetProcurment value) getProcurment,
+    required TResult Function(_GetBusiness value) getBusiness,
+    required TResult Function(_GetCategories value) getCategories,
+    required TResult Function(_Search value) search,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -60,6 +72,9 @@ mixin _$HomeEvent {
     TResult? Function(_GetArticles value)? getArticles,
     TResult? Function(_GetWather value)? getWather,
     TResult? Function(_GetProcurment value)? getProcurment,
+    TResult? Function(_GetBusiness value)? getBusiness,
+    TResult? Function(_GetCategories value)? getCategories,
+    TResult? Function(_Search value)? search,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -69,6 +84,9 @@ mixin _$HomeEvent {
     TResult Function(_GetArticles value)? getArticles,
     TResult Function(_GetWather value)? getWather,
     TResult Function(_GetProcurment value)? getProcurment,
+    TResult Function(_GetBusiness value)? getBusiness,
+    TResult Function(_GetCategories value)? getCategories,
+    TResult Function(_Search value)? search,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -134,6 +152,9 @@ class _$_GetPopularPosts implements _GetPopularPosts {
     required TResult Function() getArticles,
     required TResult Function() getWather,
     required TResult Function() getProcurment,
+    required TResult Function() getBusiness,
+    required TResult Function() getCategories,
+    required TResult Function(String text) search,
   }) {
     return getPopularPosts();
   }
@@ -146,6 +167,9 @@ class _$_GetPopularPosts implements _GetPopularPosts {
     TResult? Function()? getArticles,
     TResult? Function()? getWather,
     TResult? Function()? getProcurment,
+    TResult? Function()? getBusiness,
+    TResult? Function()? getCategories,
+    TResult? Function(String text)? search,
   }) {
     return getPopularPosts?.call();
   }
@@ -158,6 +182,9 @@ class _$_GetPopularPosts implements _GetPopularPosts {
     TResult Function()? getArticles,
     TResult Function()? getWather,
     TResult Function()? getProcurment,
+    TResult Function()? getBusiness,
+    TResult Function()? getCategories,
+    TResult Function(String text)? search,
     required TResult orElse(),
   }) {
     if (getPopularPosts != null) {
@@ -174,6 +201,9 @@ class _$_GetPopularPosts implements _GetPopularPosts {
     required TResult Function(_GetArticles value) getArticles,
     required TResult Function(_GetWather value) getWather,
     required TResult Function(_GetProcurment value) getProcurment,
+    required TResult Function(_GetBusiness value) getBusiness,
+    required TResult Function(_GetCategories value) getCategories,
+    required TResult Function(_Search value) search,
   }) {
     return getPopularPosts(this);
   }
@@ -186,6 +216,9 @@ class _$_GetPopularPosts implements _GetPopularPosts {
     TResult? Function(_GetArticles value)? getArticles,
     TResult? Function(_GetWather value)? getWather,
     TResult? Function(_GetProcurment value)? getProcurment,
+    TResult? Function(_GetBusiness value)? getBusiness,
+    TResult? Function(_GetCategories value)? getCategories,
+    TResult? Function(_Search value)? search,
   }) {
     return getPopularPosts?.call(this);
   }
@@ -198,6 +231,9 @@ class _$_GetPopularPosts implements _GetPopularPosts {
     TResult Function(_GetArticles value)? getArticles,
     TResult Function(_GetWather value)? getWather,
     TResult Function(_GetProcurment value)? getProcurment,
+    TResult Function(_GetBusiness value)? getBusiness,
+    TResult Function(_GetCategories value)? getCategories,
+    TResult Function(_Search value)? search,
     required TResult orElse(),
   }) {
     if (getPopularPosts != null) {
@@ -254,6 +290,9 @@ class _$_GetAuthorOffered implements _GetAuthorOffered {
     required TResult Function() getArticles,
     required TResult Function() getWather,
     required TResult Function() getProcurment,
+    required TResult Function() getBusiness,
+    required TResult Function() getCategories,
+    required TResult Function(String text) search,
   }) {
     return getAuthorOffered();
   }
@@ -266,6 +305,9 @@ class _$_GetAuthorOffered implements _GetAuthorOffered {
     TResult? Function()? getArticles,
     TResult? Function()? getWather,
     TResult? Function()? getProcurment,
+    TResult? Function()? getBusiness,
+    TResult? Function()? getCategories,
+    TResult? Function(String text)? search,
   }) {
     return getAuthorOffered?.call();
   }
@@ -278,6 +320,9 @@ class _$_GetAuthorOffered implements _GetAuthorOffered {
     TResult Function()? getArticles,
     TResult Function()? getWather,
     TResult Function()? getProcurment,
+    TResult Function()? getBusiness,
+    TResult Function()? getCategories,
+    TResult Function(String text)? search,
     required TResult orElse(),
   }) {
     if (getAuthorOffered != null) {
@@ -294,6 +339,9 @@ class _$_GetAuthorOffered implements _GetAuthorOffered {
     required TResult Function(_GetArticles value) getArticles,
     required TResult Function(_GetWather value) getWather,
     required TResult Function(_GetProcurment value) getProcurment,
+    required TResult Function(_GetBusiness value) getBusiness,
+    required TResult Function(_GetCategories value) getCategories,
+    required TResult Function(_Search value) search,
   }) {
     return getAuthorOffered(this);
   }
@@ -306,6 +354,9 @@ class _$_GetAuthorOffered implements _GetAuthorOffered {
     TResult? Function(_GetArticles value)? getArticles,
     TResult? Function(_GetWather value)? getWather,
     TResult? Function(_GetProcurment value)? getProcurment,
+    TResult? Function(_GetBusiness value)? getBusiness,
+    TResult? Function(_GetCategories value)? getCategories,
+    TResult? Function(_Search value)? search,
   }) {
     return getAuthorOffered?.call(this);
   }
@@ -318,6 +369,9 @@ class _$_GetAuthorOffered implements _GetAuthorOffered {
     TResult Function(_GetArticles value)? getArticles,
     TResult Function(_GetWather value)? getWather,
     TResult Function(_GetProcurment value)? getProcurment,
+    TResult Function(_GetBusiness value)? getBusiness,
+    TResult Function(_GetCategories value)? getCategories,
+    TResult Function(_Search value)? search,
     required TResult orElse(),
   }) {
     if (getAuthorOffered != null) {
@@ -374,6 +428,9 @@ class _$_GetArticles implements _GetArticles {
     required TResult Function() getArticles,
     required TResult Function() getWather,
     required TResult Function() getProcurment,
+    required TResult Function() getBusiness,
+    required TResult Function() getCategories,
+    required TResult Function(String text) search,
   }) {
     return getArticles();
   }
@@ -386,6 +443,9 @@ class _$_GetArticles implements _GetArticles {
     TResult? Function()? getArticles,
     TResult? Function()? getWather,
     TResult? Function()? getProcurment,
+    TResult? Function()? getBusiness,
+    TResult? Function()? getCategories,
+    TResult? Function(String text)? search,
   }) {
     return getArticles?.call();
   }
@@ -398,6 +458,9 @@ class _$_GetArticles implements _GetArticles {
     TResult Function()? getArticles,
     TResult Function()? getWather,
     TResult Function()? getProcurment,
+    TResult Function()? getBusiness,
+    TResult Function()? getCategories,
+    TResult Function(String text)? search,
     required TResult orElse(),
   }) {
     if (getArticles != null) {
@@ -414,6 +477,9 @@ class _$_GetArticles implements _GetArticles {
     required TResult Function(_GetArticles value) getArticles,
     required TResult Function(_GetWather value) getWather,
     required TResult Function(_GetProcurment value) getProcurment,
+    required TResult Function(_GetBusiness value) getBusiness,
+    required TResult Function(_GetCategories value) getCategories,
+    required TResult Function(_Search value) search,
   }) {
     return getArticles(this);
   }
@@ -426,6 +492,9 @@ class _$_GetArticles implements _GetArticles {
     TResult? Function(_GetArticles value)? getArticles,
     TResult? Function(_GetWather value)? getWather,
     TResult? Function(_GetProcurment value)? getProcurment,
+    TResult? Function(_GetBusiness value)? getBusiness,
+    TResult? Function(_GetCategories value)? getCategories,
+    TResult? Function(_Search value)? search,
   }) {
     return getArticles?.call(this);
   }
@@ -438,6 +507,9 @@ class _$_GetArticles implements _GetArticles {
     TResult Function(_GetArticles value)? getArticles,
     TResult Function(_GetWather value)? getWather,
     TResult Function(_GetProcurment value)? getProcurment,
+    TResult Function(_GetBusiness value)? getBusiness,
+    TResult Function(_GetCategories value)? getCategories,
+    TResult Function(_Search value)? search,
     required TResult orElse(),
   }) {
     if (getArticles != null) {
@@ -494,6 +566,9 @@ class _$_GetWather implements _GetWather {
     required TResult Function() getArticles,
     required TResult Function() getWather,
     required TResult Function() getProcurment,
+    required TResult Function() getBusiness,
+    required TResult Function() getCategories,
+    required TResult Function(String text) search,
   }) {
     return getWather();
   }
@@ -506,6 +581,9 @@ class _$_GetWather implements _GetWather {
     TResult? Function()? getArticles,
     TResult? Function()? getWather,
     TResult? Function()? getProcurment,
+    TResult? Function()? getBusiness,
+    TResult? Function()? getCategories,
+    TResult? Function(String text)? search,
   }) {
     return getWather?.call();
   }
@@ -518,6 +596,9 @@ class _$_GetWather implements _GetWather {
     TResult Function()? getArticles,
     TResult Function()? getWather,
     TResult Function()? getProcurment,
+    TResult Function()? getBusiness,
+    TResult Function()? getCategories,
+    TResult Function(String text)? search,
     required TResult orElse(),
   }) {
     if (getWather != null) {
@@ -534,6 +615,9 @@ class _$_GetWather implements _GetWather {
     required TResult Function(_GetArticles value) getArticles,
     required TResult Function(_GetWather value) getWather,
     required TResult Function(_GetProcurment value) getProcurment,
+    required TResult Function(_GetBusiness value) getBusiness,
+    required TResult Function(_GetCategories value) getCategories,
+    required TResult Function(_Search value) search,
   }) {
     return getWather(this);
   }
@@ -546,6 +630,9 @@ class _$_GetWather implements _GetWather {
     TResult? Function(_GetArticles value)? getArticles,
     TResult? Function(_GetWather value)? getWather,
     TResult? Function(_GetProcurment value)? getProcurment,
+    TResult? Function(_GetBusiness value)? getBusiness,
+    TResult? Function(_GetCategories value)? getCategories,
+    TResult? Function(_Search value)? search,
   }) {
     return getWather?.call(this);
   }
@@ -558,6 +645,9 @@ class _$_GetWather implements _GetWather {
     TResult Function(_GetArticles value)? getArticles,
     TResult Function(_GetWather value)? getWather,
     TResult Function(_GetProcurment value)? getProcurment,
+    TResult Function(_GetBusiness value)? getBusiness,
+    TResult Function(_GetCategories value)? getCategories,
+    TResult Function(_Search value)? search,
     required TResult orElse(),
   }) {
     if (getWather != null) {
@@ -614,6 +704,9 @@ class _$_GetProcurment implements _GetProcurment {
     required TResult Function() getArticles,
     required TResult Function() getWather,
     required TResult Function() getProcurment,
+    required TResult Function() getBusiness,
+    required TResult Function() getCategories,
+    required TResult Function(String text) search,
   }) {
     return getProcurment();
   }
@@ -626,6 +719,9 @@ class _$_GetProcurment implements _GetProcurment {
     TResult? Function()? getArticles,
     TResult? Function()? getWather,
     TResult? Function()? getProcurment,
+    TResult? Function()? getBusiness,
+    TResult? Function()? getCategories,
+    TResult? Function(String text)? search,
   }) {
     return getProcurment?.call();
   }
@@ -638,6 +734,9 @@ class _$_GetProcurment implements _GetProcurment {
     TResult Function()? getArticles,
     TResult Function()? getWather,
     TResult Function()? getProcurment,
+    TResult Function()? getBusiness,
+    TResult Function()? getCategories,
+    TResult Function(String text)? search,
     required TResult orElse(),
   }) {
     if (getProcurment != null) {
@@ -654,6 +753,9 @@ class _$_GetProcurment implements _GetProcurment {
     required TResult Function(_GetArticles value) getArticles,
     required TResult Function(_GetWather value) getWather,
     required TResult Function(_GetProcurment value) getProcurment,
+    required TResult Function(_GetBusiness value) getBusiness,
+    required TResult Function(_GetCategories value) getCategories,
+    required TResult Function(_Search value) search,
   }) {
     return getProcurment(this);
   }
@@ -666,6 +768,9 @@ class _$_GetProcurment implements _GetProcurment {
     TResult? Function(_GetArticles value)? getArticles,
     TResult? Function(_GetWather value)? getWather,
     TResult? Function(_GetProcurment value)? getProcurment,
+    TResult? Function(_GetBusiness value)? getBusiness,
+    TResult? Function(_GetCategories value)? getCategories,
+    TResult? Function(_Search value)? search,
   }) {
     return getProcurment?.call(this);
   }
@@ -678,6 +783,9 @@ class _$_GetProcurment implements _GetProcurment {
     TResult Function(_GetArticles value)? getArticles,
     TResult Function(_GetWather value)? getWather,
     TResult Function(_GetProcurment value)? getProcurment,
+    TResult Function(_GetBusiness value)? getBusiness,
+    TResult Function(_GetCategories value)? getCategories,
+    TResult Function(_Search value)? search,
     required TResult orElse(),
   }) {
     if (getProcurment != null) {
@@ -692,10 +800,461 @@ abstract class _GetProcurment implements HomeEvent {
 }
 
 /// @nodoc
+abstract class _$$_GetBusinessCopyWith<$Res> {
+  factory _$$_GetBusinessCopyWith(
+          _$_GetBusiness value, $Res Function(_$_GetBusiness) then) =
+      __$$_GetBusinessCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_GetBusinessCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$_GetBusiness>
+    implements _$$_GetBusinessCopyWith<$Res> {
+  __$$_GetBusinessCopyWithImpl(
+      _$_GetBusiness _value, $Res Function(_$_GetBusiness) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_GetBusiness implements _GetBusiness {
+  _$_GetBusiness();
+
+  @override
+  String toString() {
+    return 'HomeEvent.getBusiness()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_GetBusiness);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getPopularPosts,
+    required TResult Function() getAuthorOffered,
+    required TResult Function() getArticles,
+    required TResult Function() getWather,
+    required TResult Function() getProcurment,
+    required TResult Function() getBusiness,
+    required TResult Function() getCategories,
+    required TResult Function(String text) search,
+  }) {
+    return getBusiness();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getPopularPosts,
+    TResult? Function()? getAuthorOffered,
+    TResult? Function()? getArticles,
+    TResult? Function()? getWather,
+    TResult? Function()? getProcurment,
+    TResult? Function()? getBusiness,
+    TResult? Function()? getCategories,
+    TResult? Function(String text)? search,
+  }) {
+    return getBusiness?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getPopularPosts,
+    TResult Function()? getAuthorOffered,
+    TResult Function()? getArticles,
+    TResult Function()? getWather,
+    TResult Function()? getProcurment,
+    TResult Function()? getBusiness,
+    TResult Function()? getCategories,
+    TResult Function(String text)? search,
+    required TResult orElse(),
+  }) {
+    if (getBusiness != null) {
+      return getBusiness();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_GetPopularPosts value) getPopularPosts,
+    required TResult Function(_GetAuthorOffered value) getAuthorOffered,
+    required TResult Function(_GetArticles value) getArticles,
+    required TResult Function(_GetWather value) getWather,
+    required TResult Function(_GetProcurment value) getProcurment,
+    required TResult Function(_GetBusiness value) getBusiness,
+    required TResult Function(_GetCategories value) getCategories,
+    required TResult Function(_Search value) search,
+  }) {
+    return getBusiness(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_GetPopularPosts value)? getPopularPosts,
+    TResult? Function(_GetAuthorOffered value)? getAuthorOffered,
+    TResult? Function(_GetArticles value)? getArticles,
+    TResult? Function(_GetWather value)? getWather,
+    TResult? Function(_GetProcurment value)? getProcurment,
+    TResult? Function(_GetBusiness value)? getBusiness,
+    TResult? Function(_GetCategories value)? getCategories,
+    TResult? Function(_Search value)? search,
+  }) {
+    return getBusiness?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_GetPopularPosts value)? getPopularPosts,
+    TResult Function(_GetAuthorOffered value)? getAuthorOffered,
+    TResult Function(_GetArticles value)? getArticles,
+    TResult Function(_GetWather value)? getWather,
+    TResult Function(_GetProcurment value)? getProcurment,
+    TResult Function(_GetBusiness value)? getBusiness,
+    TResult Function(_GetCategories value)? getCategories,
+    TResult Function(_Search value)? search,
+    required TResult orElse(),
+  }) {
+    if (getBusiness != null) {
+      return getBusiness(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetBusiness implements HomeEvent {
+  factory _GetBusiness() = _$_GetBusiness;
+}
+
+/// @nodoc
+abstract class _$$_GetCategoriesCopyWith<$Res> {
+  factory _$$_GetCategoriesCopyWith(
+          _$_GetCategories value, $Res Function(_$_GetCategories) then) =
+      __$$_GetCategoriesCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_GetCategoriesCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$_GetCategories>
+    implements _$$_GetCategoriesCopyWith<$Res> {
+  __$$_GetCategoriesCopyWithImpl(
+      _$_GetCategories _value, $Res Function(_$_GetCategories) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_GetCategories implements _GetCategories {
+  _$_GetCategories();
+
+  @override
+  String toString() {
+    return 'HomeEvent.getCategories()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_GetCategories);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getPopularPosts,
+    required TResult Function() getAuthorOffered,
+    required TResult Function() getArticles,
+    required TResult Function() getWather,
+    required TResult Function() getProcurment,
+    required TResult Function() getBusiness,
+    required TResult Function() getCategories,
+    required TResult Function(String text) search,
+  }) {
+    return getCategories();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getPopularPosts,
+    TResult? Function()? getAuthorOffered,
+    TResult? Function()? getArticles,
+    TResult? Function()? getWather,
+    TResult? Function()? getProcurment,
+    TResult? Function()? getBusiness,
+    TResult? Function()? getCategories,
+    TResult? Function(String text)? search,
+  }) {
+    return getCategories?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getPopularPosts,
+    TResult Function()? getAuthorOffered,
+    TResult Function()? getArticles,
+    TResult Function()? getWather,
+    TResult Function()? getProcurment,
+    TResult Function()? getBusiness,
+    TResult Function()? getCategories,
+    TResult Function(String text)? search,
+    required TResult orElse(),
+  }) {
+    if (getCategories != null) {
+      return getCategories();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_GetPopularPosts value) getPopularPosts,
+    required TResult Function(_GetAuthorOffered value) getAuthorOffered,
+    required TResult Function(_GetArticles value) getArticles,
+    required TResult Function(_GetWather value) getWather,
+    required TResult Function(_GetProcurment value) getProcurment,
+    required TResult Function(_GetBusiness value) getBusiness,
+    required TResult Function(_GetCategories value) getCategories,
+    required TResult Function(_Search value) search,
+  }) {
+    return getCategories(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_GetPopularPosts value)? getPopularPosts,
+    TResult? Function(_GetAuthorOffered value)? getAuthorOffered,
+    TResult? Function(_GetArticles value)? getArticles,
+    TResult? Function(_GetWather value)? getWather,
+    TResult? Function(_GetProcurment value)? getProcurment,
+    TResult? Function(_GetBusiness value)? getBusiness,
+    TResult? Function(_GetCategories value)? getCategories,
+    TResult? Function(_Search value)? search,
+  }) {
+    return getCategories?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_GetPopularPosts value)? getPopularPosts,
+    TResult Function(_GetAuthorOffered value)? getAuthorOffered,
+    TResult Function(_GetArticles value)? getArticles,
+    TResult Function(_GetWather value)? getWather,
+    TResult Function(_GetProcurment value)? getProcurment,
+    TResult Function(_GetBusiness value)? getBusiness,
+    TResult Function(_GetCategories value)? getCategories,
+    TResult Function(_Search value)? search,
+    required TResult orElse(),
+  }) {
+    if (getCategories != null) {
+      return getCategories(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetCategories implements HomeEvent {
+  factory _GetCategories() = _$_GetCategories;
+}
+
+/// @nodoc
+abstract class _$$_SearchCopyWith<$Res> {
+  factory _$$_SearchCopyWith(_$_Search value, $Res Function(_$_Search) then) =
+      __$$_SearchCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String text});
+}
+
+/// @nodoc
+class __$$_SearchCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$_Search>
+    implements _$$_SearchCopyWith<$Res> {
+  __$$_SearchCopyWithImpl(_$_Search _value, $Res Function(_$_Search) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? text = null,
+  }) {
+    return _then(_$_Search(
+      text: null == text
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_Search implements _Search {
+  _$_Search({required this.text});
+
+  @override
+  final String text;
+
+  @override
+  String toString() {
+    return 'HomeEvent.search(text: $text)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_Search &&
+            (identical(other.text, text) || other.text == text));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, text);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_SearchCopyWith<_$_Search> get copyWith =>
+      __$$_SearchCopyWithImpl<_$_Search>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getPopularPosts,
+    required TResult Function() getAuthorOffered,
+    required TResult Function() getArticles,
+    required TResult Function() getWather,
+    required TResult Function() getProcurment,
+    required TResult Function() getBusiness,
+    required TResult Function() getCategories,
+    required TResult Function(String text) search,
+  }) {
+    return search(text);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getPopularPosts,
+    TResult? Function()? getAuthorOffered,
+    TResult? Function()? getArticles,
+    TResult? Function()? getWather,
+    TResult? Function()? getProcurment,
+    TResult? Function()? getBusiness,
+    TResult? Function()? getCategories,
+    TResult? Function(String text)? search,
+  }) {
+    return search?.call(text);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getPopularPosts,
+    TResult Function()? getAuthorOffered,
+    TResult Function()? getArticles,
+    TResult Function()? getWather,
+    TResult Function()? getProcurment,
+    TResult Function()? getBusiness,
+    TResult Function()? getCategories,
+    TResult Function(String text)? search,
+    required TResult orElse(),
+  }) {
+    if (search != null) {
+      return search(text);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_GetPopularPosts value) getPopularPosts,
+    required TResult Function(_GetAuthorOffered value) getAuthorOffered,
+    required TResult Function(_GetArticles value) getArticles,
+    required TResult Function(_GetWather value) getWather,
+    required TResult Function(_GetProcurment value) getProcurment,
+    required TResult Function(_GetBusiness value) getBusiness,
+    required TResult Function(_GetCategories value) getCategories,
+    required TResult Function(_Search value) search,
+  }) {
+    return search(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_GetPopularPosts value)? getPopularPosts,
+    TResult? Function(_GetAuthorOffered value)? getAuthorOffered,
+    TResult? Function(_GetArticles value)? getArticles,
+    TResult? Function(_GetWather value)? getWather,
+    TResult? Function(_GetProcurment value)? getProcurment,
+    TResult? Function(_GetBusiness value)? getBusiness,
+    TResult? Function(_GetCategories value)? getCategories,
+    TResult? Function(_Search value)? search,
+  }) {
+    return search?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_GetPopularPosts value)? getPopularPosts,
+    TResult Function(_GetAuthorOffered value)? getAuthorOffered,
+    TResult Function(_GetArticles value)? getArticles,
+    TResult Function(_GetWather value)? getWather,
+    TResult Function(_GetProcurment value)? getProcurment,
+    TResult Function(_GetBusiness value)? getBusiness,
+    TResult Function(_GetCategories value)? getCategories,
+    TResult Function(_Search value)? search,
+    required TResult orElse(),
+  }) {
+    if (search != null) {
+      return search(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Search implements HomeEvent {
+  factory _Search({required final String text}) = _$_Search;
+
+  String get text;
+  @JsonKey(ignore: true)
+  _$$_SearchCopyWith<_$_Search> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$HomeState {
   PopularModel? get popularModel => throw _privateConstructorUsedError;
+  List<PopularModelResult> get businessModel =>
+      throw _privateConstructorUsedError;
   PopularModel? get popularModelPinned => throw _privateConstructorUsedError;
+  PopularModel? get procurmentModel => throw _privateConstructorUsedError;
+  PopularModel? get articlesModel => throw _privateConstructorUsedError;
   WeatherModel? get weatherModel => throw _privateConstructorUsedError;
+  PopularModel? get authorOfferedModel => throw _privateConstructorUsedError;
+  SearchModel? get searchModel => throw _privateConstructorUsedError;
+  List<CategoriesModel>? get categoriesModel =>
+      throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $HomeStateCopyWith<HomeState> get copyWith =>
@@ -709,8 +1268,14 @@ abstract class $HomeStateCopyWith<$Res> {
   @useResult
   $Res call(
       {PopularModel? popularModel,
+      List<PopularModelResult> businessModel,
       PopularModel? popularModelPinned,
-      WeatherModel? weatherModel});
+      PopularModel? procurmentModel,
+      PopularModel? articlesModel,
+      WeatherModel? weatherModel,
+      PopularModel? authorOfferedModel,
+      SearchModel? searchModel,
+      List<CategoriesModel>? categoriesModel});
 }
 
 /// @nodoc
@@ -727,22 +1292,52 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
   @override
   $Res call({
     Object? popularModel = freezed,
+    Object? businessModel = null,
     Object? popularModelPinned = freezed,
+    Object? procurmentModel = freezed,
+    Object? articlesModel = freezed,
     Object? weatherModel = freezed,
+    Object? authorOfferedModel = freezed,
+    Object? searchModel = freezed,
+    Object? categoriesModel = freezed,
   }) {
     return _then(_value.copyWith(
       popularModel: freezed == popularModel
           ? _value.popularModel
           : popularModel // ignore: cast_nullable_to_non_nullable
               as PopularModel?,
+      businessModel: null == businessModel
+          ? _value.businessModel
+          : businessModel // ignore: cast_nullable_to_non_nullable
+              as List<PopularModelResult>,
       popularModelPinned: freezed == popularModelPinned
           ? _value.popularModelPinned
           : popularModelPinned // ignore: cast_nullable_to_non_nullable
+              as PopularModel?,
+      procurmentModel: freezed == procurmentModel
+          ? _value.procurmentModel
+          : procurmentModel // ignore: cast_nullable_to_non_nullable
+              as PopularModel?,
+      articlesModel: freezed == articlesModel
+          ? _value.articlesModel
+          : articlesModel // ignore: cast_nullable_to_non_nullable
               as PopularModel?,
       weatherModel: freezed == weatherModel
           ? _value.weatherModel
           : weatherModel // ignore: cast_nullable_to_non_nullable
               as WeatherModel?,
+      authorOfferedModel: freezed == authorOfferedModel
+          ? _value.authorOfferedModel
+          : authorOfferedModel // ignore: cast_nullable_to_non_nullable
+              as PopularModel?,
+      searchModel: freezed == searchModel
+          ? _value.searchModel
+          : searchModel // ignore: cast_nullable_to_non_nullable
+              as SearchModel?,
+      categoriesModel: freezed == categoriesModel
+          ? _value.categoriesModel
+          : categoriesModel // ignore: cast_nullable_to_non_nullable
+              as List<CategoriesModel>?,
     ) as $Val);
   }
 }
@@ -756,8 +1351,14 @@ abstract class _$$_HomeStateCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
   @useResult
   $Res call(
       {PopularModel? popularModel,
+      List<PopularModelResult> businessModel,
       PopularModel? popularModelPinned,
-      WeatherModel? weatherModel});
+      PopularModel? procurmentModel,
+      PopularModel? articlesModel,
+      WeatherModel? weatherModel,
+      PopularModel? authorOfferedModel,
+      SearchModel? searchModel,
+      List<CategoriesModel>? categoriesModel});
 }
 
 /// @nodoc
@@ -772,22 +1373,52 @@ class __$$_HomeStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? popularModel = freezed,
+    Object? businessModel = null,
     Object? popularModelPinned = freezed,
+    Object? procurmentModel = freezed,
+    Object? articlesModel = freezed,
     Object? weatherModel = freezed,
+    Object? authorOfferedModel = freezed,
+    Object? searchModel = freezed,
+    Object? categoriesModel = freezed,
   }) {
     return _then(_$_HomeState(
       popularModel: freezed == popularModel
           ? _value.popularModel
           : popularModel // ignore: cast_nullable_to_non_nullable
               as PopularModel?,
+      businessModel: null == businessModel
+          ? _value._businessModel
+          : businessModel // ignore: cast_nullable_to_non_nullable
+              as List<PopularModelResult>,
       popularModelPinned: freezed == popularModelPinned
           ? _value.popularModelPinned
           : popularModelPinned // ignore: cast_nullable_to_non_nullable
+              as PopularModel?,
+      procurmentModel: freezed == procurmentModel
+          ? _value.procurmentModel
+          : procurmentModel // ignore: cast_nullable_to_non_nullable
+              as PopularModel?,
+      articlesModel: freezed == articlesModel
+          ? _value.articlesModel
+          : articlesModel // ignore: cast_nullable_to_non_nullable
               as PopularModel?,
       weatherModel: freezed == weatherModel
           ? _value.weatherModel
           : weatherModel // ignore: cast_nullable_to_non_nullable
               as WeatherModel?,
+      authorOfferedModel: freezed == authorOfferedModel
+          ? _value.authorOfferedModel
+          : authorOfferedModel // ignore: cast_nullable_to_non_nullable
+              as PopularModel?,
+      searchModel: freezed == searchModel
+          ? _value.searchModel
+          : searchModel // ignore: cast_nullable_to_non_nullable
+              as SearchModel?,
+      categoriesModel: freezed == categoriesModel
+          ? _value._categoriesModel
+          : categoriesModel // ignore: cast_nullable_to_non_nullable
+              as List<CategoriesModel>?,
     ));
   }
 }
@@ -797,22 +1428,61 @@ class __$$_HomeStateCopyWithImpl<$Res>
 class _$_HomeState implements _HomeState {
   const _$_HomeState(
       {this.popularModel = null,
+      final List<PopularModelResult> businessModel = const [],
       this.popularModelPinned = null,
-      this.weatherModel = null});
+      this.procurmentModel = null,
+      this.articlesModel = null,
+      this.weatherModel = null,
+      this.authorOfferedModel = null,
+      this.searchModel = null,
+      final List<CategoriesModel>? categoriesModel = const []})
+      : _businessModel = businessModel,
+        _categoriesModel = categoriesModel;
 
   @override
   @JsonKey()
   final PopularModel? popularModel;
+  final List<PopularModelResult> _businessModel;
+  @override
+  @JsonKey()
+  List<PopularModelResult> get businessModel {
+    if (_businessModel is EqualUnmodifiableListView) return _businessModel;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_businessModel);
+  }
+
   @override
   @JsonKey()
   final PopularModel? popularModelPinned;
   @override
   @JsonKey()
+  final PopularModel? procurmentModel;
+  @override
+  @JsonKey()
+  final PopularModel? articlesModel;
+  @override
+  @JsonKey()
   final WeatherModel? weatherModel;
+  @override
+  @JsonKey()
+  final PopularModel? authorOfferedModel;
+  @override
+  @JsonKey()
+  final SearchModel? searchModel;
+  final List<CategoriesModel>? _categoriesModel;
+  @override
+  @JsonKey()
+  List<CategoriesModel>? get categoriesModel {
+    final value = _categoriesModel;
+    if (value == null) return null;
+    if (_categoriesModel is EqualUnmodifiableListView) return _categoriesModel;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
-    return 'HomeState(popularModel: $popularModel, popularModelPinned: $popularModelPinned, weatherModel: $weatherModel)';
+    return 'HomeState(popularModel: $popularModel, businessModel: $businessModel, popularModelPinned: $popularModelPinned, procurmentModel: $procurmentModel, articlesModel: $articlesModel, weatherModel: $weatherModel, authorOfferedModel: $authorOfferedModel, searchModel: $searchModel, categoriesModel: $categoriesModel)';
   }
 
   @override
@@ -822,15 +1492,36 @@ class _$_HomeState implements _HomeState {
             other is _$_HomeState &&
             (identical(other.popularModel, popularModel) ||
                 other.popularModel == popularModel) &&
+            const DeepCollectionEquality()
+                .equals(other._businessModel, _businessModel) &&
             (identical(other.popularModelPinned, popularModelPinned) ||
                 other.popularModelPinned == popularModelPinned) &&
+            (identical(other.procurmentModel, procurmentModel) ||
+                other.procurmentModel == procurmentModel) &&
+            (identical(other.articlesModel, articlesModel) ||
+                other.articlesModel == articlesModel) &&
             (identical(other.weatherModel, weatherModel) ||
-                other.weatherModel == weatherModel));
+                other.weatherModel == weatherModel) &&
+            (identical(other.authorOfferedModel, authorOfferedModel) ||
+                other.authorOfferedModel == authorOfferedModel) &&
+            (identical(other.searchModel, searchModel) ||
+                other.searchModel == searchModel) &&
+            const DeepCollectionEquality()
+                .equals(other._categoriesModel, _categoriesModel));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, popularModel, popularModelPinned, weatherModel);
+  int get hashCode => Object.hash(
+      runtimeType,
+      popularModel,
+      const DeepCollectionEquality().hash(_businessModel),
+      popularModelPinned,
+      procurmentModel,
+      articlesModel,
+      weatherModel,
+      authorOfferedModel,
+      searchModel,
+      const DeepCollectionEquality().hash(_categoriesModel));
 
   @JsonKey(ignore: true)
   @override
@@ -842,15 +1533,33 @@ class _$_HomeState implements _HomeState {
 abstract class _HomeState implements HomeState {
   const factory _HomeState(
       {final PopularModel? popularModel,
+      final List<PopularModelResult> businessModel,
       final PopularModel? popularModelPinned,
-      final WeatherModel? weatherModel}) = _$_HomeState;
+      final PopularModel? procurmentModel,
+      final PopularModel? articlesModel,
+      final WeatherModel? weatherModel,
+      final PopularModel? authorOfferedModel,
+      final SearchModel? searchModel,
+      final List<CategoriesModel>? categoriesModel}) = _$_HomeState;
 
   @override
   PopularModel? get popularModel;
   @override
+  List<PopularModelResult> get businessModel;
+  @override
   PopularModel? get popularModelPinned;
   @override
+  PopularModel? get procurmentModel;
+  @override
+  PopularModel? get articlesModel;
+  @override
   WeatherModel? get weatherModel;
+  @override
+  PopularModel? get authorOfferedModel;
+  @override
+  SearchModel? get searchModel;
+  @override
+  List<CategoriesModel>? get categoriesModel;
   @override
   @JsonKey(ignore: true)
   _$$_HomeStateCopyWith<_$_HomeState> get copyWith =>

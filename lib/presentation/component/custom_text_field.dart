@@ -25,30 +25,32 @@ class CustomTextField extends StatefulWidget {
   final bool readOnly;
   final ValueChanged<String>? onChanged;
   final FocusNode? focusNode;
+  final bool autoFocus;
 
-  const CustomTextField(
-      {Key? key,
-      this.onPressed,
-      this.onsuffixIconPressed,
-      this.formatter,
-      this.controller,
-      this.hintText = '',
-      this.title = '',
-      this.isPassword = false,
-      this.minLines = 1,
-      this.maxLines = 2,
-      this.isEmail = false,
-      this.keyboardType = TextInputType.text,
-      this.suffixIcon,
-      this.maxLength,
-      this.obscureText = false,
-      this.error,
-      this.titleHintText = '',
-      this.readOnly = false,
-      this.onChanged,
-      this.focusNode,
-      this.textAlign = TextAlign.start})
-      : super(key: key);
+  const CustomTextField({
+    Key? key,
+    this.onPressed,
+    this.onsuffixIconPressed,
+    this.formatter,
+    this.controller,
+    this.hintText = '',
+    this.title = '',
+    this.isPassword = false,
+    this.minLines = 1,
+    this.maxLines = 2,
+    this.isEmail = false,
+    this.keyboardType = TextInputType.text,
+    this.suffixIcon,
+    this.maxLength,
+    this.obscureText = false,
+    this.error,
+    this.titleHintText = '',
+    this.readOnly = false,
+    this.onChanged,
+    this.focusNode,
+    this.textAlign = TextAlign.start,
+    this.autoFocus = false,
+  }) : super(key: key);
 
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
@@ -82,6 +84,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
               ? SizedBox(height: 6.h)
               : const SizedBox(),
           TextFormField(
+            autofocus: widget.autoFocus,
             onTap: widget.onPressed,
             textInputAction: TextInputAction.done,
             focusNode: widget.focusNode,
@@ -103,21 +106,23 @@ class _CustomTextFieldState extends State<CustomTextField> {
                       icon: widget.suffixIcon!,
                       onPressed: widget.onsuffixIconPressed ?? () {})
                   : null,
-              focusColor: Style.primary,
+              filled: true,
+              fillColor: colors.white,
+              focusColor: Style.linkBold,
               border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(16.r),
-                borderSide: BorderSide(color: colors.primary, width: 1),
+                borderRadius: BorderRadius.circular(8.r),
+                borderSide: BorderSide(color: colors.linkBold, width: 2),
               ),
               enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(16.r),
-                borderSide: BorderSide(color: colors.primary, width: 1),
+                borderRadius: BorderRadius.circular(8.r),
+                borderSide: BorderSide(color: colors.linkBold, width: 2),
               ),
               focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(16.r),
-                borderSide: BorderSide(color: colors.primary, width: 1),
+                borderRadius: BorderRadius.circular(8.r),
+                borderSide: BorderSide(color: colors.linkBold, width: 2),
               ),
               hintText: widget.hintText,
-              hintStyle: fonts.regular12,
+              hintStyle: fonts.medium14.copyWith(color: colors.subtitle),
               errorText: widget.error,
               errorStyle: fonts.regular12.copyWith(color: colors.error),
               contentPadding:

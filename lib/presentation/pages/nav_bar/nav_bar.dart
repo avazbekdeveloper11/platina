@@ -39,8 +39,13 @@ class _BottomNavBarState extends State<BottomNavBar> {
                       HomeService.create(),
                       WeatherService.create(),
                     ))
+                      ..add(HomeEvent.getWather())
                       ..add(HomeEvent.getPopularPosts())
-                      ..add(HomeEvent.getWather()),
+                      ..add(HomeEvent.getAuthorOffered())
+                      ..add(HomeEvent.getProcurment())
+                      ..add(HomeEvent.getArticles())
+                      ..add(HomeEvent.getBusiness())
+                      ..add(HomeEvent.getCategories()),
                     child: const HomePage(),
                   ),
                   const PageNotFound(),

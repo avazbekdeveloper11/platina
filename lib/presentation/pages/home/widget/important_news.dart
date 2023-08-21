@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:platina/infrastructure/models/popular_model/popular_model.dart';
@@ -20,7 +21,7 @@ class ImportantNews extends StatelessWidget {
           ),
           child: Column(
             children: [
-              const ArrowTile(title: "Муҳим янгиликлар"),
+              ArrowTile(title: "important_news".tr()),
               BigCart(popularModel: popularModel),
             ],
           ),

@@ -8,9 +8,16 @@ import 'package:platina/presentation/pages/home/widget/tile_builder.dart';
 import 'package:platina/presentation/styles/theme_warpper.dart';
 import 'package:simple_html_css/simple_html_css.dart';
 
-class BigCart extends StatelessWidget {
+class BigCart extends StatefulWidget {
   final PopularModel popularModel;
   const BigCart({super.key, required this.popularModel});
+
+  @override
+  State<BigCart> createState() => _BigCartState();
+}
+
+class _BigCartState extends State<BigCart> {
+  bool showText = false;
 
   @override
   Widget build(BuildContext context) {
@@ -27,8 +34,8 @@ class BigCart extends StatelessWidget {
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: CachedNetworkImageProvider(
-                      popularModel.results!.isNotEmpty
-                          ? "https://platina.uz/_ipx/w_620/https://cp.platina.uz/${popularModel.results?.first.image}"
+                      widget.popularModel.results!.isNotEmpty
+                          ? "https://platina.uz/_ipx/w_620/https://cp.platina.uz/${widget.popularModel.results?.first.image}"
                           : '',
                     ),
                     fit: BoxFit.cover,
@@ -38,31 +45,42 @@ class BigCart extends StatelessWidget {
               ),
               SizedBox(height: 16.h),
               Text(
-                popularModel.results!.isNotEmpty
-                    ? popularModel.results?.first.title ?? ''
+                widget.popularModel.results!.isNotEmpty
+                    ? widget.popularModel.results?.first.title ?? ''
                     : '',
                 style: fonts.bold16.copyWith(fontSize: 18.sp),
               ),
               SizedBox(height: 10.h),
               HTML.toRichText(
                 context,
-                popularModel.results!.isNotEmpty
-                    ? popularModel.results?.first.shortDescription ?? ''
-                    : '',
+                showText
+                    ? widget.popularModel.results!.isNotEmpty
+                        ? widget.popularModel.results?.first.description ?? ''
+                        : ''
+                    : widget.popularModel.results!.isNotEmpty
+                        ? widget.popularModel.results?.first.shortDescription ??
+                            ''
+                        : '',
                 defaultTextStyle: fonts.regular14.copyWith(
                   color: colors.subtitle,
                 ),
               ),
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  setState(() {
+                    showText = !showText;
+                  });
+                },
                 child: Text(
                   'more'.tr(),
                   style: fonts.regular14.copyWith(color: colors.link),
                 ),
               ),
               SizedBox(height: 10.h),
-              const OldTime(),
-              TileBuilder(popularModel: popularModel),
+              OldTime(
+                popularModelResult: widget.popularModel.results?.first,
+              ),
+              TileBuilder(popularModel: widget.popularModel),
             ],
           ),
         );

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:platina/infrastructure/core/constant.dart';
 import 'package:platina/presentation/pages/home/widget/divider_widget.dart';
+import 'package:platina/presentation/pages/home/widget/url_laluncher.dart';
 import 'package:platina/presentation/styles/theme_warpper.dart';
 
 class BottomMenu extends StatelessWidget {
@@ -66,6 +68,45 @@ class BottomMenu extends StatelessWidget {
                 ),
                 const DividerWidget(spacing: 0),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    SizedBox(
+                      width: 160.w,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: List.generate(
+                          Constant.networkList.length,
+                          (index) => GestureDetector(
+                            onTap: () {
+                              UrlLauncher.launchInBrowser(
+                                url: Uri.parse(
+                                    Constant.networkList[index]['url']),
+                              );
+                            },
+                            child: SvgPicture.asset(
+                              Constant.networkList[index]['icon'],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 6.w, vertical: 8.w),
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        color: colors.networkColor,
+                        borderRadius: BorderRadius.circular(8.r),
+                      ),
+                      child: Text(
+                        '18+',
+                        style: fonts.medium14,
+                      ),
+                    )
+                  ],
+                ),
+                SizedBox(height: 16.h),
+                Row(
                   children: [
                     SvgPicture.asset(icons.redmedia),
                     SizedBox(width: 10.w),
@@ -75,6 +116,7 @@ class BottomMenu extends StatelessWidget {
                     ),
                   ],
                 ),
+                SizedBox(height: 28.h),
               ],
             ),
           ),

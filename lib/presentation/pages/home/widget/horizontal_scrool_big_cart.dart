@@ -1,11 +1,14 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:platina/infrastructure/models/popular_model/popular_model.dart';
 import 'package:platina/presentation/pages/home/widget/arrow_tile.dart';
 import 'package:platina/presentation/pages/home/widget/editor_choice_cart.dart';
 import 'package:platina/presentation/styles/theme_warpper.dart';
 
 class HorizontalScroolBigCart extends StatelessWidget {
-  const HorizontalScroolBigCart({super.key});
+  final PopularModel authorOfferedModel;
+  const HorizontalScroolBigCart({super.key, required this.authorOfferedModel});
 
   @override
   Widget build(BuildContext context) {
@@ -15,12 +18,15 @@ class HorizontalScroolBigCart extends StatelessWidget {
           color: Colors.white,
           child: Column(
             children: [
-              const ArrowTile(title: "Муҳаррир танлови"),
+              ArrowTile(title: "author_offered".tr()),
               SizedBox(
                 height: 300.h,
                 width: double.infinity,
                 child: ListView.builder(
-                  itemCount: 3,
+                  padding: EdgeInsets.only(right: 16.h),
+                  itemCount: (authorOfferedModel.results?.length ?? 0) > 12
+                      ? 12
+                      : authorOfferedModel.results?.length ?? 0,
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (_, index) {
                     return Container(
@@ -28,7 +34,10 @@ class HorizontalScroolBigCart extends StatelessWidget {
                         color: colors.white,
                         borderRadius: BorderRadius.circular(16.r),
                       ),
-                      child: const EditorChoiceCart(),
+                      child: EditorChoiceCart(
+                        authorOfferedResultModel:
+                            authorOfferedModel.results![index],
+                      ),
                     );
                   },
                 ),

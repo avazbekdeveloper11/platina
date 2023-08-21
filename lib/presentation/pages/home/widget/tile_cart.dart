@@ -12,7 +12,7 @@ class TileCart extends StatelessWidget {
   const TileCart({
     super.key,
     this.isSociety = true,
-     this.popularModelResult,
+    this.popularModelResult,
   });
 
   @override
@@ -38,7 +38,7 @@ class TileCart extends StatelessWidget {
                     ),
                     SizedBox(height: 16.h),
                     OldTime(
-                      isSociety: false,
+                      isSociety: isSociety,
                       popularModelResult: popularModelResult,
                     ),
                   ],

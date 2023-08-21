@@ -8,6 +8,7 @@ part of 'serializer.dart';
 
 Serializers _$serializers = (new Serializers().toBuilder()
       ..add(Astro.serializer)
+      ..add(CategoriesModel.serializer)
       ..add(Category.serializer)
       ..add(Condition.serializer)
       ..add(Current.serializer)
@@ -19,6 +20,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(Location.serializer)
       ..add(PopularModel.serializer)
       ..add(PopularModelResult.serializer)
+      ..add(Results.serializer)
+      ..add(SearchModel.serializer)
       ..add(WeatherModel.serializer)
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(Forecastday)]),
@@ -34,7 +37,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
           () => new ListBuilder<Hour>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(PopularModelResult)]),
-          () => new ListBuilder<PopularModelResult>()))
+          () => new ListBuilder<PopularModelResult>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(Results)]),
+          () => new ListBuilder<Results>()))
     .build();
 
 // ignore_for_file: deprecated_member_use_from_same_package,type=lint

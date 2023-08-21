@@ -1,11 +1,14 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:platina/infrastructure/models/popular_model/popular_model.dart';
 import 'package:platina/presentation/pages/home/widget/arrow_tile.dart';
 import 'package:platina/presentation/pages/home/widget/divider_widget.dart';
 import 'package:platina/presentation/styles/theme_warpper.dart';
 
 class CartTitleBuilder extends StatelessWidget {
-  const CartTitleBuilder({super.key});
+  final PopularModel articlesModel;
+  const CartTitleBuilder({super.key, required this.articlesModel});
 
   @override
   Widget build(BuildContext context) {
@@ -20,11 +23,15 @@ class CartTitleBuilder extends StatelessWidget {
             children: [
               const ArrowTile(title: 'Мақолалар'),
               ListView.separated(
-                itemCount: 3,
+                itemCount: (articlesModel.results?.length ?? 0) > 6
+                    ? 6
+                    : articlesModel.results?.length ?? 0,
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
                 separatorBuilder: (context, index) => const DividerWidget(),
                 itemBuilder: (BuildContext context, int index) {
+                  final PopularModelResult model =
+                      articlesModel.results![index];
                   return Padding(
                     padding: EdgeInsets.only(
                       left: 16.w,
@@ -41,12 +48,15 @@ class CartTitleBuilder extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(16.r),
                             image: DecorationImage(
-                              image: AssetImage(icons.defaultImg),
+                              fit: BoxFit.cover,
+                              image: CachedNetworkImageProvider(
+                                'https://platina.uz/_ipx/w_620/https://cp.platina.uz/${model.image}',
+                              ),
                             ),
                           ),
                         ),
                         Text(
-                          "Бухорода йўқ қилинган ҳаётлар",
+                          model.title ?? '',
                           style: fonts.bold16.copyWith(fontSize: 18.sp),
                           maxLines: 2,
                         ),

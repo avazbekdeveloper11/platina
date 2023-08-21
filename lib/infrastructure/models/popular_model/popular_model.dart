@@ -53,7 +53,7 @@ abstract class PopularModelResult
   @BuiltValueField(wireName: 'short_description')
   String? get shortDescription;
   @BuiltValueField(wireName: 'relates_to')
-  String? get relatesTo;
+  int? get relatesTo;
   @BuiltValueField(wireName: 'description')
   String? get description;
   @BuiltValueField(wireName: 'slug')

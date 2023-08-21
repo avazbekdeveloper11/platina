@@ -1,10 +1,13 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:platina/infrastructure/models/popular_model/popular_model.dart';
 import 'package:platina/presentation/pages/home/widget/old_time.dart';
 import 'package:platina/presentation/styles/theme_warpper.dart';
 
 class EditorChoiceCart extends StatelessWidget {
-  const EditorChoiceCart({super.key});
+  final PopularModelResult? authorOfferedResultModel;
+  const EditorChoiceCart({super.key, required this.authorOfferedResultModel});
 
   @override
   Widget build(BuildContext context) {
@@ -19,11 +22,12 @@ class EditorChoiceCart extends StatelessWidget {
               Container(
                 height: 188.h,
                 decoration: BoxDecoration(
-                  color: colors.redishOrange,
                   borderRadius: BorderRadius.circular(8),
                   image: DecorationImage(
                     fit: BoxFit.cover,
-                    image: AssetImage(icons.defaultImg),
+                    image: CachedNetworkImageProvider(
+                      'https://platina.uz/_ipx/w_620/https://cp.platina.uz/${authorOfferedResultModel?.image}',
+                    ),
                   ),
                 ),
               ),

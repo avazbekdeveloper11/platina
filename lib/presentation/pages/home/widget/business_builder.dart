@@ -1,11 +1,14 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:platina/infrastructure/models/popular_model/popular_model.dart';
 import 'package:platina/presentation/pages/home/widget/arrow_tile.dart';
 import 'package:platina/presentation/pages/home/widget/business_cart.dart';
 import 'package:platina/presentation/styles/theme_warpper.dart';
 
 class BusinessBuilder extends StatelessWidget {
-  const BusinessBuilder({super.key});
+  final List<PopularModelResult> bussinessModel;
+  const BusinessBuilder({super.key, required this.bussinessModel});
 
   @override
   Widget build(BuildContext context) {
@@ -18,20 +21,17 @@ class BusinessBuilder extends StatelessWidget {
           ),
           child: Column(
             children: [
-              const ArrowTile(title: 'Бизнес'),
+              ArrowTile(title: 'business'.tr()),
               SizedBox(
-                height: 280.h,
+                height: 332.h,
                 width: double.infinity,
                 child: ListView.builder(
-                  itemCount: 3,
+                  itemCount: bussinessModel.length,
                   scrollDirection: Axis.horizontal,
+                  padding: EdgeInsets.only(right: 16.h),
                   itemBuilder: (_, index) {
-                    return Container(
-                      decoration: BoxDecoration(
-                        color: colors.white,
-                        borderRadius: BorderRadius.circular(16.r),
-                      ),
-                      child: const BusinessCart(),
+                    return BusinessCart(
+                      businessResults: bussinessModel[index],
                     );
                   },
                 ),

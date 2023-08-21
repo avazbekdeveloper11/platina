@@ -136,8 +136,7 @@ class _$PopularModelResultSerializer
     if (value != null) {
       result
         ..add('relates_to')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
+        ..add(serializers.serialize(value, specifiedType: const FullType(int)));
     }
     value = object.description;
     if (value != null) {
@@ -306,7 +305,7 @@ class _$PopularModelResultSerializer
           break;
         case 'relates_to':
           result.relatesTo = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
+              specifiedType: const FullType(int)) as int?;
           break;
         case 'description':
           result.description = serializers.deserialize(value,
@@ -653,7 +652,7 @@ class _$PopularModelResult extends PopularModelResult {
   @override
   final String? shortDescription;
   @override
-  final String? relatesTo;
+  final int? relatesTo;
   @override
   final String? description;
   @override
@@ -846,9 +845,9 @@ class PopularModelResultBuilder
   set shortDescription(String? shortDescription) =>
       _$this._shortDescription = shortDescription;
 
-  String? _relatesTo;
-  String? get relatesTo => _$this._relatesTo;
-  set relatesTo(String? relatesTo) => _$this._relatesTo = relatesTo;
+  int? _relatesTo;
+  int? get relatesTo => _$this._relatesTo;
+  set relatesTo(int? relatesTo) => _$this._relatesTo = relatesTo;
 
   String? _description;
   String? get description => _$this._description;

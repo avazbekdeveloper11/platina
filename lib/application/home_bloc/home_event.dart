@@ -7,4 +7,7 @@ abstract class HomeEvent with _$HomeEvent {
   factory HomeEvent.getArticles() = _GetArticles;
   factory HomeEvent.getWather() = _GetWather;
   factory HomeEvent.getProcurment() = _GetProcurment;
+  factory HomeEvent.getBusiness() = _GetBusiness;
+  factory HomeEvent.getCategories() = _GetCategories;
+  factory HomeEvent.search({required String text}) = _Search;
 }

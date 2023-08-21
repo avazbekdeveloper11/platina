@@ -39,6 +39,10 @@ class CustomColorSet {
 
   final Color dividerColor;
 
+  final Color networkColor;
+
+  final Color linkBold;
+
   CustomColorSet._({
     required this.secondaryVariant,
     required this.text,
@@ -59,6 +63,8 @@ class CustomColorSet {
     required this.link,
     required this.redishOrange,
     required this.dividerColor,
+    required this.networkColor,
+    required this.linkBold,
   });
 
   factory CustomColorSet._create(CustomThemeMode mode) {
@@ -101,6 +107,10 @@ class CustomColorSet {
 
     const dividerColor = Style.dividerColor;
 
+    const networkColor = Style.networkColor;
+
+    const linkBold = Style.linkBold;
+
     return CustomColorSet._(
       text: text,
       bodyText: bodyText,
@@ -121,6 +131,8 @@ class CustomColorSet {
       link: link,
       redishOrange: redishOrange,
       dividerColor: dividerColor,
+      networkColor: networkColor,
+      linkBold: linkBold,
     );
   }
 

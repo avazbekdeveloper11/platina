@@ -35,11 +35,18 @@ class Style {
 
   static const Color link = Color(0XFF0066CC);
 
+  static const Color linkBold = Color(0XFF0066CC);
+
   static const Color redishOrange = Color(0XFFFF7D25);
 
   static const Color dividerColor = Color(0XFFD5DDF3);
 
   static const Color backgroundColor = Color(0XFFF7F8FF);
+
+  static const Color networkColor = Color(0XFFF8F8FF);
+
+  static const Color shimmerBaseColor = Color(0xFFEAECF0);
+  static const Color shimmerHighlightColor = Color(0xFFFAFAFD);
 
   static const BoxShadow blueIconShadow = BoxShadow(
     color: Color(0x20696A6F),
