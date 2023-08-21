@@ -1,5 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
+// ignore_for_file: duplicate_ignore
+
 part of 'home_apis.dart';
 
 // **************************************************************************
