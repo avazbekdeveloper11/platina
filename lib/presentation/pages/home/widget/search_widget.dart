@@ -74,7 +74,6 @@ class _SearchWidgetState extends State<SearchWidget> {
                           right: 16.w,
                         ),
                         child: CustomTextField(
-                          autoFocus: true,
                           focusNode: focusNode,
                           hintText: 'search_text'.tr(),
                           controller: searchController,

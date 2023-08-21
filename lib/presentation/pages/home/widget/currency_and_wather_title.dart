@@ -27,13 +27,13 @@ class _CurrencyAndWatherTitleState extends State<CurrencyAndWatherTitle> {
   Widget build(BuildContext context) {
     return ThemeWrapper(
       builder: (context, colors, fonts, icons, controller) {
-        return Padding(
-          padding: EdgeInsets.only(top: 16.h, bottom: 20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 16.w),
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16.w),
+              child: SizedBox(
+                height: 60.h,
                 child: Row(
                   children: [
                     GestureDetector(
@@ -46,7 +46,11 @@ class _CurrencyAndWatherTitleState extends State<CurrencyAndWatherTitle> {
                         }
                         setState(() {});
                       },
-                      child: SizedBox(
+                      child: Container(
+                        height: 40.h,
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 8.h,
+                        ),
                         child: Row(
                           children: [
                             CircleAvatar(
@@ -94,14 +98,17 @@ class _CurrencyAndWatherTitleState extends State<CurrencyAndWatherTitle> {
                         }
                         setState(() {});
                       },
-                      child: SizedBox(
+                      child: Container(
+                        height: 40.h,
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 8.h,
+                        ),
                         child: Row(
                           children: [
                             widget.weatherModel?.current?.condition?.icon !=
                                     null
                                 ? Image.network(
                                     'https:${widget.weatherModel!.current!.condition!.icon}',
-                                    width: 32.sp,
                                   )
                                 : const SizedBox(),
                             Text(
@@ -115,12 +122,12 @@ class _CurrencyAndWatherTitleState extends State<CurrencyAndWatherTitle> {
                   ],
                 ),
               ),
-              // ? Currency Tile
+            ),
+            // ? Currency Tile
 
-              currencyAnimatedTile(colors, fonts),
-              weatherAnimatedTile(colors, fonts)
-            ],
-          ),
+            currencyAnimatedTile(colors, fonts),
+            weatherAnimatedTile(colors, fonts),
+          ],
         );
       },
     );
@@ -131,8 +138,8 @@ class _CurrencyAndWatherTitleState extends State<CurrencyAndWatherTitle> {
       width: 228.w,
       height: weatherHeight.h,
       alignment: Alignment.center,
-      duration: const Duration(milliseconds: 500),
-      margin: EdgeInsets.only(top: weatherHeight > 20 ? 20.h : 0),
+      duration: const Duration(milliseconds: 250),
+      margin: EdgeInsets.only(top: weatherHeight > 20 ? 12.h : 0, bottom: 12.h),
       decoration: BoxDecoration(
         color: colors.white,
         borderRadius: BorderRadius.circular(8),
@@ -193,13 +200,13 @@ class _CurrencyAndWatherTitleState extends State<CurrencyAndWatherTitle> {
       height: currencyHeight.h,
       width: 1.sw,
       color: colors.white,
-      margin: EdgeInsets.only(top: currencyHeight.h > 20 ? 20.h : 0),
+      margin: EdgeInsets.only(top: currencyHeight.h > 20 ? 12.h : 0),
       padding: EdgeInsets.only(
         left: 16.h,
         right: 16.w,
         top: 20.h,
       ),
-      duration: const Duration(milliseconds: 500),
+      duration: const Duration(milliseconds: 250),
       child: SingleChildScrollView(
         physics: const NeverScrollableScrollPhysics(),
         child: SingleChildScrollView(
