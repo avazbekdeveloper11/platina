@@ -18,7 +18,7 @@ class AppWidget extends StatelessWidget {
     return FutureBuilder<List>(
       future: Future.wait([
         PreferenceService.create,
-        ConnectivityX().create(),
+        ConnectivityX.create,
         GridTheme.create,
       ]),
       builder: (context, AsyncSnapshot<List<dynamic>> snap) {

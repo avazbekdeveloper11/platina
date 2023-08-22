@@ -140,7 +140,7 @@ class _CurrencyAndWatherTitleState extends State<CurrencyAndWatherTitle> {
       width: 228.w,
       height: weatherHeight.h,
       alignment: Alignment.center,
-      duration: const Duration(milliseconds: 250),
+      duration: const Duration(milliseconds: 400),
       margin: EdgeInsets.only(top: weatherHeight > 20 ? 12.h : 0, bottom: 12.h),
       decoration: BoxDecoration(
         color: colors.white,
@@ -208,7 +208,7 @@ class _CurrencyAndWatherTitleState extends State<CurrencyAndWatherTitle> {
         right: 16.w,
         top: 20.h,
       ),
-      duration: const Duration(milliseconds: 250),
+      duration: const Duration(milliseconds: 400),
       child: SingleChildScrollView(
         physics: const NeverScrollableScrollPhysics(),
         child: SingleChildScrollView(
