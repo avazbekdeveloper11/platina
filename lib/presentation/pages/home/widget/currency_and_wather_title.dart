@@ -127,8 +127,6 @@ class _CurrencyAndWatherTitleState extends State<CurrencyAndWatherTitle> {
 
             currencyAnimatedTile(colors, fonts),
             weatherAnimatedTile(colors, fonts)
-
-   
           ],
         );
       },
@@ -140,8 +138,10 @@ class _CurrencyAndWatherTitleState extends State<CurrencyAndWatherTitle> {
       width: 228.w,
       height: weatherHeight.h,
       alignment: Alignment.center,
-      duration: const Duration(milliseconds: 400),
-      margin: EdgeInsets.only(top: weatherHeight > 20 ? 12.h : 0, bottom: 12.h),
+      duration: const Duration(microseconds: 3000),
+      margin: EdgeInsets.only(
+        bottom: weatherHeight > 20 ? 12.h : 0,
+      ),
       decoration: BoxDecoration(
         color: colors.white,
         borderRadius: BorderRadius.circular(8),
@@ -202,68 +202,66 @@ class _CurrencyAndWatherTitleState extends State<CurrencyAndWatherTitle> {
       height: currencyHeight.h,
       width: 1.sw,
       color: colors.white,
-      margin: EdgeInsets.only(top: currencyHeight.h > 20 ? 12.h : 0),
+      margin: EdgeInsets.only(
+        bottom: currencyHeight > 20 ? 12.h : 0,
+      ),
       padding: EdgeInsets.only(
         left: 16.h,
         right: 16.w,
         top: 20.h,
       ),
-      duration: const Duration(milliseconds: 400),
+      duration: const Duration(milliseconds: 1700),
       child: SingleChildScrollView(
         physics: const NeverScrollableScrollPhysics(),
-        child: SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: List<Widget>.generate(
-              Constant.currentcyList.length,
-              (index) => index != currency
-                  ? InkWell(
-                      onTap: () {
-                        setState(() {
-                          currencyHeight = 0;
-                          currency = index;
-                        });
-                      },
-                      child: SizedBox(
-                        width: 168.w,
-                        child: Row(
-                          children: [
-                            CircleAvatar(
-                              radius: 10.r,
-                              backgroundImage: AssetImage(
-                                Constant.currentcyList[index]['img'],
-                              ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: List<Widget>.generate(
+            Constant.currentcyList.length,
+            (index) => index != currency
+                ? InkWell(
+                    onTap: () {
+                      setState(() {
+                        currencyHeight = 0;
+                        currency = index;
+                      });
+                    },
+                    child: SizedBox(
+                      width: 168.w,
+                      child: Row(
+                        children: [
+                          CircleAvatar(
+                            radius: 10.r,
+                            backgroundImage: AssetImage(
+                              Constant.currentcyList[index]['img'],
                             ),
-                            RichText(
-                              text: TextSpan(
-                                children: [
-                                  const TextSpan(text: ' '),
-                                  TextSpan(
-                                      text: Constant.currentcyList[index]
-                                              ['name'] +
-                                          ' ',
-                                      style: fonts.medium16),
-                                  const TextSpan(text: ' '),
-                                  TextSpan(
+                          ),
+                          RichText(
+                            text: TextSpan(
+                              children: [
+                                const TextSpan(text: ' '),
+                                TextSpan(
                                     text: Constant.currentcyList[index]
-                                            ['price'] +
+                                            ['name'] +
                                         ' ',
-                                    style: fonts.medium16
-                                        .copyWith(color: colors.downRed),
-                                  ),
-                                ],
-                              ),
+                                    style: fonts.medium16),
+                                const TextSpan(text: ' '),
+                                TextSpan(
+                                  text: Constant.currentcyList[index]['price'] +
+                                      ' ',
+                                  style: fonts.medium16
+                                      .copyWith(color: colors.downRed),
+                                ),
+                              ],
                             ),
-                            SvgPicture.asset(
-                              Constant.currentcyList[index]['icon'],
-                            ),
-                          ],
-                        ),
+                          ),
+                          SvgPicture.asset(
+                            Constant.currentcyList[index]['icon'],
+                          ),
+                        ],
                       ),
-                    )
-                  : const SizedBox(),
-            ),
+                    ),
+                  )
+                : const SizedBox(),
           ),
         ),
       ),

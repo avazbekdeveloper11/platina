@@ -85,8 +85,10 @@ class OldTime extends StatelessWidget {
         default:
           return "";
       }
-    } else if (day != 0) {
+    } else if (day == 1) {
       return "${'yesterday'.tr()}, ${text.substring(11, 16)}";
+    } else if (day != 0) {
+      return "$day ${'the_day_before'.tr()}, ${text.substring(11, 16)}";
     } else if (hour != 0) {
       return "$hour ${'hour_ago'.tr()}";
     }

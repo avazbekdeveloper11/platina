@@ -51,16 +51,17 @@ class DrawerWiidget extends StatelessWidget {
                 ),
                 DividerWidget(height: 20.h),
                 Padding(
-                  padding: EdgeInsets.only(left: 16.w),
+                  padding: EdgeInsets.only(left: 20.w),
                   child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: List<Widget>.generate(
                       2,
                       (index) => context.locale.languageCode ==
                               Constant.languageList[index]['lang']
                           ? Container(
                               margin: EdgeInsets.only(
-                                left: index == 0 ? 0 : 16.w,
-                                right: index != 0 ? 0 : 16.w,
+                                left: index == 0 ? 0 : 20.w,
+                                right: index != 0 ? 0 : 20.w,
                               ),
                               decoration: BoxDecoration(
                                 color: colors.backgroundColor,

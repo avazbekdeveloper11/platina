@@ -104,7 +104,7 @@ class BottomMenu extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 16.h),
-                Row(
+                Row(mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SvgPicture.asset(icons.redmedia),
                     SizedBox(width: 10.w),

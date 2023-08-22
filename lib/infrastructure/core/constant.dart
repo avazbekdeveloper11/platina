@@ -30,13 +30,13 @@ class Constant {
 
   static List<Map> languageList = [
     {
+      "name": "Ўзб",
+      "lang": "ru",
+    },
+    {
       "name": "Oʻzb",
       "lang": "uz",
     },
-    {
-      "name": "Ўзб",
-      "lang": "ru",
-    }
   ];
 
   static List<Map> networkList = [
